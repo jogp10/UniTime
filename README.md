@@ -16,8 +16,9 @@ UniTime
 To do (see the Product vision template here: https://uxstudioteam.com/ux-blog/product-vision/)
 
 ## Main Features
- - Feature 1 - Short description
- - Feature 2 - Short description
+ - Consulta de todos os momentos de avaliação - Com esta aplicação, o usuário terá a possibilidade de consultar a data e hora de todos os próximos momentos de
+ avaliação (como frequências, entregas de projetos e exames, por ex.)
+ - Notificação ao utilizador da aproximação de um determinado momento de avaliação - 
 ...
 
 ## Required API's
