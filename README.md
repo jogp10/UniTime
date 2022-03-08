@@ -2,11 +2,11 @@
 
 ## Members
 
-António Oliveira Ferreira - 202004375
-João Francisco Ferreira Maldonado - 202004244
-João de Oliveira Gigante Pinheiro - 202008133
-Ricardo Almeida Cavalheiro - 202005103
-Ricardo Filipe da Costa Cabral Ferreira - 201907835
+- António Oliveira Ferreira - 202004375
+- João Francisco Ferreira Maldonado - 202004244
+- João de Oliveira Gigante Pinheiro - 202008133
+- Ricardo Almeida Cavalheiro - 202005103
+- Ricardo Filipe da Costa Cabral Ferreira - 201907835
 
 # Product Name
 
