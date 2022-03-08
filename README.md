@@ -1,7 +1,5 @@
 # 2LEIC04T2
 
-# 2LEIC04T2
-
 ## Members
 
 António Oliveira Ferreira - 202004375
