@@ -16,19 +16,19 @@ UniTime
 To do (see the Product vision template here: https://uxstudioteam.com/ux-blog/product-vision/)
 
 ## Main Features
- - Consulta de todos os momentos de avaliação - Com esta aplicação, o usuário terá a possibilidade de consultar a data e hora de todos os próximos momentos de
+ - **Consultar de todos os momentos de avaliação** - Com esta aplicação, o usuário terá a possibilidade de consultar a data e hora de todos os próximos momentos de
  avaliação (como frequências, entregas de projetos e exames, por ex.).
- - Aviso aos utilizadores da aproximação de um momento de avaliação - Quando faltar, por exemplo, uma semana para uma frequência ou entrega,
+ - **Notificar os utilizadores da aproximação de um momento de avaliação** - Quando faltar, por exemplo, uma semana para uma frequência ou entrega,
 o user receberá uma notificação, com uma periodicidade a definir, a avisá-lo de quantos dias é que faltam para esse determinado momento de avaliação.
-- Verificação das informações de cada cadeira - Ao usar esta app, o utilizador possuirá a capacidade de verificar, de forma mais
+- **Verificação das informações de cada cadeira** - Ao usar esta app, o utilizador possuirá a capacidade de verificar, de forma mais
 resumida e fácil de compreender, todas as informações relativas às diversas unidades curriculares que frequenta (objetivos, métodos de avaliação,
 professores, bibliografias, etc.).
-- Facilidade no cálculo da média - O processo de cálculo da média global e específica a cada unidade curricular será agilizado com o uso desta aplicação. 
+- **Facilitar o cálculo da média** - O processo de cálculo da média global e específica a cada unidade curricular será agilizado com o uso desta aplicação. 
 À medida que o user vai tendo conhecimento das suas notas, este pode colocar as suas classificações na app, de forma a ter uma noção de quanto é que poderá
 ser a sua nota final.
-- Visualização do horário do estudante - Uma das funcionalidades desta aplicação é a visualização do horário do utilizador, sendo que pode verificar em que dias este tem
+- **Visualizar o horário do estudante** - Uma das funcionalidades desta aplicação é a visualização do horário do utilizador, sendo que pode verificar em que dias este tem
 uma determinada unidade curricular ou apenas aulas práticas.
-- Visualização do calendário escolar - Para além do seu horário pessoal, o utilizador também terá o acesso ao calendário escolar definido pela faculdade, permitindo
+- **Visualizar o calendário escolar** - Para além do seu horário pessoal, o utilizador também terá o acesso ao calendário escolar definido pela faculdade, permitindo
 uma melhor organização do seu tempo.
 
 ## Required API's
