@@ -32,7 +32,7 @@ uma determinada unidade curricular ou apenas aulas práticas.
 uma melhor organização do seu tempo.
 
 ## Required API's
-- Horário dos estudantes do Sigarra
+- Perfil do estudante do Sigarra
 - Informação de cada UC do Sigarra
 - Calendário escolar do Siagrra
-- Classificações do estudante do Sigarra
+- Credenciais de login do Sigarra
