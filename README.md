@@ -34,5 +34,5 @@ uma melhor organização do seu tempo.
 ## Required API's
 - Perfil do estudante do Sigarra
 - Informação de cada UC do Sigarra
-- Calendário escolar do Siagrra
+- Calendário escolar do Sigarra
 - Credenciais de login do Sigarra
