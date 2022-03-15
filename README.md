@@ -20,10 +20,10 @@ A UniTime é uma aplicação desenhada para estudantes que facilita o processo d
  avaliação futuros (como frequências, entregas de projetos e exames, por ex.).
  - **Notificar os utilizadores da aproximação de um momento de avaliação** - Quando faltar, por exemplo, uma semana para uma frequência ou entrega,
 o utilizador receberá uma notificação, com uma periodicidade a definir, a avisá-lo de quantos dias é que faltam para esse determinado momento de avaliação.
-- **Verificação das informações de cada cadeira** - Ao usar esta app, o utilizador possuirá a capacidade de verificar, de forma mais
+- **Verificar as informações de cada cadeira** - Ao usar esta app, o utilizador possuirá a capacidade de verificar, de forma mais
 resumida e fácil de compreender, todas as informações relativas às diversas unidades curriculares que frequenta (objetivos, métodos de avaliação,
 professores, bibliografias, etc.).
-- **Facilitar o cálculo da média** - O processo de cálculo da média global e específica a cada unidade curricular será agilizado com o uso desta aplicação. 
+- **Calcular a média** - O processo de cálculo da média global e específica a cada unidade curricular será agilizado com o uso desta aplicação. 
 À medida que o user vai tendo conhecimento das suas notas, este pode colocar as suas classificações na app, de forma a ter uma noção de quanto é que poderá
 ser a sua nota final.
 - **Visualizar o horário do estudante** - Uma das funcionalidades desta aplicação é a visualização do horário do utilizador, sendo que pode verificar em que dias este tem
