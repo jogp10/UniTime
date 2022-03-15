@@ -19,7 +19,7 @@ To do (see the Product vision template here: https://uxstudioteam.com/ux-blog/pr
  - **Consultar todos os momentos de avaliação** - Com esta aplicação, o usuário terá a possibilidade de consultar a data e hora de todos os momentos de
  avaliação futuros (como frequências, entregas de projetos e exames, por ex.).
  - **Notificar os utilizadores da aproximação de um momento de avaliação** - Quando faltar, por exemplo, uma semana para uma frequência ou entrega,
-o user receberá uma notificação, com uma periodicidade a definir, a avisá-lo de quantos dias é que faltam para esse determinado momento de avaliação.
+o utilizador receberá uma notificação, com uma periodicidade a definir, a avisá-lo de quantos dias é que faltam para esse determinado momento de avaliação.
 - **Verificação das informações de cada cadeira** - Ao usar esta app, o utilizador possuirá a capacidade de verificar, de forma mais
 resumida e fácil de compreender, todas as informações relativas às diversas unidades curriculares que frequenta (objetivos, métodos de avaliação,
 professores, bibliografias, etc.).
