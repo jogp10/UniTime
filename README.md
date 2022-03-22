@@ -73,13 +73,12 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 |             |           |
 | ----------- |-----------|
-|*Name*         | Check an UC's information |
+|*Name*         | View School's Calendar |
 | *Actor* | Student |
-| *Description* | The student checks the information (bibliography, objectives, teachers, etc.) regarding a certain UC. |
-| *Preconditions* | -The student needs to be logged in on their account;<br> -The UC needs to exist. |
-| *Postconditions* | - The student obtained the information they wanted to check. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. The student goes to the menu and selects the "Subjects" tab;<br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject it wants to check, by clicking on its name; <br> 6. The system shows all the information about the chosen subject; <br> 7. The student scrolls until they find the pretended information.|
-| *Alternative flows and exceptions* | 1. [Another way to access a certain UC] If the student, in step 3, <br> selects the "Schedule" tab instead, the system then shows them their current <br> schedule. Then, the student can click on a subject's name and check its information.<br> |
+| *Description* | The student can check the School’s Calendar alongside the events (School Break, Evaluations). |
+| *Preconditions* | -	The student needs to be logged in on their account;<br> - The School’s Calendar needs to be available. |
+| *Postconditions* | -	The student visualized the School’s Calendar and the scheduled events. |
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. 3.	The student goes to the menu and selects the “Calendar” tab;<br> 4. 4.	The system shows the calendar with scheduled events for the student; |
 
 |             |           |
 | ----------- |-----------|
