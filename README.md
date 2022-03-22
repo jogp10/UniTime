@@ -78,7 +78,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Description* | The student can check the School’s Calendar alongside the events (School Break, Evaluations). |
 | *Preconditions* | -	The student needs to be logged in on their account;<br> - The School’s Calendar needs to be available. |
 | *Postconditions* | -	The student visualized the School’s Calendar and the scheduled events. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. 3.	The student goes to the menu and selects the “Calendar” tab;<br> 4. 4.	The system shows the calendar with scheduled events for the student; |
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3.	The student goes to the menu and selects the “Calendar” tab;<br> 4. The system shows the calendar with scheduled events for the student; |
 
 |             |           |
 | ----------- |-----------|
