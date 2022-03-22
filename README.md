@@ -35,4 +35,4 @@ uma melhor organização do seu tempo.
 - Perfil do estudante do Sigarra
 - Informação de cada UC do Sigarra
 - Calendário escolar do Sigarra
-- Credenciais de login do Sigarra
+- Serviço de validação do login de um utilizador no Sigarra
