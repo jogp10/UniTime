@@ -43,7 +43,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 ### Use case model
 #### - Diagram
 
-![](https://i.imgur.com/6M7Crbz.jpg)
+![](https://i.imgur.com/B35acc9.jpg)
 
 ---
 #### - Tables
