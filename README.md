@@ -40,13 +40,15 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ## Requirements
 
-### Use case model
-#### - Diagram
+<br>
+
+## Use case model
+### - Diagram
 
 ![](https://i.imgur.com/B35acc9.jpg)
 
 ---
-#### - Tables
+### - Tables
 
 
 |||
@@ -101,3 +103,85 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Preconditions* | - The student needs to be logged in on their account.;<br> - The student must be enrolled in, at least, one UC.<br> -	The UC needs to have evaluation moments. |
 | *Normal flow* | 1.	The student opens the app; <br> 2.	The system asks the user to log in if they aren’t already;<br> 3.	The student goes to the menu and selects the “Evaluations” tab;<br>4. The system shows the name of the subjects the student is enrolled in;<br> 5. The student chooses the subject it wants to check;<br>6. The system shows all the information about the evaluation moments of the UC.|
 | *Alternative flows and exceptions* | 1. [Another way to view evaluation moments] If the student, in step 3, <br> selects the "Calendário" tab instead, the system then shows them their personal calendar. <br> Then, the student can view in which days they have evaluation moments. |
+
+---
+
+## User stories
+
+### Story 1
+
+#### - UI Mockups
+
+Menu of all the student's UC's
+
+![](https://i.imgur.com/rVMShWQ.png)
+
+Information of a certain UC
+
+![](https://i.imgur.com/umhSrqW.png)
+
+#### - Acceptance Test
+
+#### - Value & effort
+
+### Story 2
+
+#### - UI Mockups
+
+Notification on the student's phone
+
+![](https://i.imgur.com/OV38pgZ.png)
+
+#### - Acceptance Test
+
+#### - Value & effort
+
+### Story 3
+
+#### - UI Mockups
+
+Student's academic calendar
+
+![](https://i.imgur.com/1tTaC6P.png)
+
+#### - Acceptance Test
+
+#### - Value & effort
+
+### Story 4
+
+#### - UI Mockups
+
+Screen with evaluation moments, personal events and schedule
+
+![](https://i.imgur.com/qyYkidw.png)
+
+#### - Acceptance Test
+
+#### - Value & effort
+
+### Story 5
+
+#### - UI Mockups
+
+Menu of the student's UC's and respective grade average
+
+![](https://i.imgur.com/18Tyekr.png)
+
+Screen where the student inputs the grade calculation formula, of a certain UC
+
+![](https://i.imgur.com/i3zQxJc.png)
+
+#### - Acceptance Test
+
+#### - Value & effort
+
+### Notes:
+
+(1) UI Mockup of the main menu:
+
+![](https://i.imgur.com/39Dqmuv.png)
+
+## Domain Model
+
+
