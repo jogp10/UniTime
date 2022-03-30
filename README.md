@@ -51,12 +51,12 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 |||
 | ----------- |-----------|
-|*Name* &nbsp;&nbsp;        | **Check an UC's information** |
+|*Name* &nbsp;&nbsp;        | **View an UC's details** |
 | *Actor* | Student |
 | *Description* | The student checks the information (bibliography, objectives, teachers, etc.) regarding a certain UC. |
 | *Preconditions* | - The student needs to be logged in on their account;<br> - The UC needs to exist. |
 | *Postconditions* | - The student obtained the information they wanted to check. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. The student goes to the menu and selects the "Minhas UC's" tab;<br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject it wants to check, by clicking on its name; <br> 6. The system shows all the information about the chosen subject; <br> 7. The student scrolls until they find the pretended information.|
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. The student goes to the menu and selects the "Minhas UC's" tab;<br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject it wants to check;<br> 6. The system shows all the information about the chosen subject; <br> 7. The student scrolls until they find the pretended information.|
 | *Alternative flows and exceptions* | 1. [Another way to access a certain UC] If the student, in step 3, <br> selects the "Calendário" tab instead, the system then shows them their current <br> academic calendar. Then, the student can click on a subject's name and check its information.<br> |
 
 <br>
@@ -79,7 +79,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Description* | The student inputs their grades and the grade calculation formula of a certain UC and then the average is displayed. |
 | *Preconditions* | - The student needs to be logged in on their account; <br> - The UC needs to exist; <br> - The student must be enrolled in the UC. |
 | *Postconditions* | - The student grades and grade calculation formula are stored; <br> - The student’s course grade average is updated. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already; <br> 3. The student goes to the menu and selects the "Grades" tab; <br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject they want to calculate the grade average, by clicking on its name; <br> 6. The system asks the user to input the grade average formula with percentages and respective labels; <br> 7. The system asks the user to input the grades, displaying the labels; <br> 8. The system stores the grade, the grade average formula and updates the course grade. |
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already; <br> 3. The student goes to the menu and selects the "Grades" tab; <br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject they want to calculate the grade average;<br> 6. The system asks the user to input the grade average formula with percentages and respective labels; <br> 7. The system asks the user to input the grades; <br> 8. The system stores the grade, the grade average formula and updates the course grade. |
 | *Alternative flows and exceptions* | 1. [Grade formula calculation already given] Step 6 can be skipped if the student has already given the UC grade average formula (the formula can also be edited later on). |
 
 <br>
@@ -102,5 +102,5 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Description* | The student can check each UC’s evaluation dates including project deliveries, exams and tests. |
 | *Preconditions* | - The student needs to be logged in on their account.;<br> - The student must be enrolled in, at least, one UC.<br> -	The UC needs to have evaluation moments. |
 | *Postconditions* | - The student obtains the information of the UC’s evaluations moments. |
-| *Normal flow* | 1.	The student opens the app; <br> 2.	The system asks the user to log in if they aren’t already;<br> 3.	The student goes to the menu and selects the “Evaluations” tab;<br>4. The system shows the name of the subjects the student is enrolled in;<br> 5. The student chooses the subject it wants to check, by clicking on its name;<br>6. The system shows all the information about the evaluation moments of the UC.|
+| *Normal flow* | 1.	The student opens the app; <br> 2.	The system asks the user to log in if they aren’t already;<br> 3.	The student goes to the menu and selects the “Evaluations” tab;<br>4. The system shows the name of the subjects the student is enrolled in;<br> 5. The student chooses the subject it wants to check;<br>6. The system shows all the information about the evaluation moments of the UC.|
 | *Alternative flows and exceptions* | 1. [Another way to view evaluation moments] If the student, in step 3, <br> selects the "Calendário" tab instead, the system then shows them their personal calendar. <br> Then, the student can view in which days they have evaluation moments. |
