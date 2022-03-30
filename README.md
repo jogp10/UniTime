@@ -56,8 +56,8 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Description* | The student checks the information (bibliography, objectives, teachers, etc.) regarding a certain UC. |
 | *Preconditions* | - The student needs to be logged in on their account;<br> - The UC needs to exist. |
 | *Postconditions* | - The student obtained the information they wanted to check. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. The student goes to the menu and selects the "Subjects" tab;<br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject it wants to check, by clicking on its name; <br> 6. The system shows all the information about the chosen subject; <br> 7. The student scrolls until they find the pretended information.|
-| *Alternative flows and exceptions* | 1. [Another way to access a certain UC] If the student, in step 3, <br> selects the "Calendar" tab instead, the system then shows them their current <br> academic calendar. Then, the student can click on a subject's name and check its information.<br> |
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3. The student goes to the menu and selects the "Minhas UC's" tab;<br> 4. The system shows the name of the subjects the student is enrolled in; <br> 5. The student chooses the subject it wants to check, by clicking on its name; <br> 6. The system shows all the information about the chosen subject; <br> 7. The student scrolls until they find the pretended information.|
+| *Alternative flows and exceptions* | 1. [Another way to access a certain UC] If the student, in step 3, <br> selects the "Calendário" tab instead, the system then shows them their current <br> academic calendar. Then, the student can click on a subject's name and check its information.<br> |
 
 <br>
 
@@ -91,7 +91,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Description* | The student can check their personal school calendar, where they can view their schedule and events (evaluations, meetings, holidays, etc.). |
 | *Preconditions* | -	The student needs to be logged in on their account;|
 | *Postconditions* | -	The student viewed their school calendar and the scheduled events. |
-| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3.	The student goes to the menu and selects the “Calendar” tab;<br> 4. The system shows the calendar; |
+| *Normal flow* | 1. The student opens the app; <br> 2. The system asks the user to log in, if they aren't already;<br> 3.	The student goes to the menu and selects the “Calendário” tab;<br> 4. The system shows the calendar; |
 
 <br>
 
@@ -103,4 +103,4 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 | *Preconditions* | - The student needs to be logged in on their account.;<br> - The student must be enrolled in, at least, one UC.<br> -	The UC needs to have evaluation moments. |
 | *Postconditions* | - The student obtains the information of the UC’s evaluations moments. |
 | *Normal flow* | 1.	The student opens the app; <br> 2.	The system asks the user to log in if they aren’t already;<br> 3.	The student goes to the menu and selects the “Evaluations” tab;<br>4. The system shows the name of the subjects the student is enrolled in;<br> 5. The student chooses the subject it wants to check, by clicking on its name;<br>6. The system shows all the information about the evaluation moments of the UC.|
-| *Alternative flows and exceptions* | 1. [Another way to view evaluation moments] If the student, in step 3, <br> selects the "Calendar" tab instead, the system then shows them their personal calendar. <br> Then, the student can view in which days they have an evaluation moment. |
+| *Alternative flows and exceptions* | 1. [Another way to view evaluation moments] If the student, in step 3, <br> selects the "Calendário" tab instead, the system then shows them their personal calendar. <br> Then, the student can view in which days they have evaluation moments. |
