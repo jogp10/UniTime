@@ -108,4 +108,11 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ## Domain Model
 
+![](https://i.imgur.com/NdMtTwR.png)
 
+### - Description
+- **User** - User of the app that is identified by their email and password;
+- **Calendar** - Academic calendar where the user can see all of their evaluation and personal events;
+- **Teacher** - Teacher of the faculty, identified by their name;
+- **UC** - Course Unit that's characterized by its information, grade formula and bibliography;
+- **Evaluation** - Evaluation moment that occurrs on a certain date and where the user gets a certain grade.
