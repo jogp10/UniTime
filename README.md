@@ -8,6 +8,8 @@
 - Ricardo Almeida Cavalheiro - 202005103
 - Ricardo Filipe da Costa Cabral Ferreira - 201907835
 
+---
+
 # Product Name
 
 UniTime
@@ -116,3 +118,8 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 - **Teacher** - Teacher of the faculty, identified by their name;
 - **UC** - Course Unit that's characterized by its information, grade formula and bibliography;
 - **Evaluation** - Evaluation moment that occurrs on a certain date and where the user gets a certain grade.
+
+---
+
+## Vertical prototype
+
