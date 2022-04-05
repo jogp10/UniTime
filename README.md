@@ -1,5 +1,7 @@
 # 2LEIC04T2
 
+---
+
 ## Members
 
 - António Oliveira Ferreira - 202004735
@@ -8,12 +10,16 @@
 - Ricardo Almeida Cavalheiro - 202005103
 - Ricardo Filipe da Costa Cabral Ferreira - 201907835
 
+---
+
 # Product Name
 
 UniTime
 
 ## Vision Stament
 A UniTime é uma aplicação desenhada para estudantes que facilita o processo de organização do tempo de estudo e de consulta de informação das Unidades Curriculares. Ao contrário do Sigarra, na UniTime, o conteúdo estará bem organizado e a sua utilização será simples.
+
+---
 
 ## Elevator Pitch
 Don't you ever desired there was an application who gave you all the information you needed to know about your course?
@@ -37,6 +43,8 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 - Informação de cada UC do Sigarra
 - Calendário escolar do Sigarra
 - Serviço de validação do login de um utilizador no Sigarra
+
+---
 
 ## Requirements
 
