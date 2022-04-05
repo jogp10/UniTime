@@ -117,7 +117,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 - **UC** - Course Unit that's characterized by its information, grade formula and bibliography;
 - **Evaluation** - Evaluation moment that occurrs on a certain date and where the user gets a certain grade.
 
---
+---
 
 ## Vertical prototype
 
