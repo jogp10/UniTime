@@ -1,8 +1,21 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:src/my_custom_form.dart';
 import 'package:src/my_calendar.dart';
+import 'package:src/my_notification.dart';
 
 void main() {
+  AwesomeNotifications().initialize('resource://drawable/res_notification_app_icon',
+    [
+      NotificationChannel(
+        channelKey: 'schedule_channel',
+        channelName: 'Schedule Notifications',
+        defaultColor: Colors.blue[800],
+        importance: NotificationImportance.High,
+        channelShowBadge: true,
+      ),
+    ],
+  );
   runApp(const MaterialApp(
     home: Home(),
   ));
@@ -20,7 +33,7 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blue[800],
       ),
       body: Container(
-        child: MyCalendar(),
+        child: MyNotification(),
       ),
     );
 
@@ -33,5 +46,12 @@ class Home extends StatelessWidget {
   Widget buildCalendar(){
     return const MyCalendar();
   }
+
+  Widget buildCustomNotification(){
+    return const MyNotification();
+  }
+
+
+
 
 }
