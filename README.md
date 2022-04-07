@@ -124,6 +124,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 ## Vertical prototype
 The following small features were implemented:
 
-- ### Notification - Example of a notification sent by UniTime
-    - Implementation:
+- #### Notification - Example of a notification sent by UniTime
+    - ##### Implementation:
+ 
 ![Imgur](https://i.imgur.com/t8oPaAGm.png) ![Imgur](https://i.imgur.com/fUmHEjLm.png)
