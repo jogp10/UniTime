@@ -18,7 +18,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text('UniTime'),
         centerTitle: true,
-        backgroundColor: Colors.blue[900],
+        backgroundColor: Colors.blue[800],
       ),
       body: Container(
         child: MyCalendar(),
