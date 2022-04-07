@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
+import 'package:src/my_calendar.dart';
 import 'package:src/notification.dart';
 
 class MyNotification extends StatefulWidget {
@@ -17,46 +20,67 @@ class _MyNotificationState extends State<MyNotification> {
       if (!isAllowed) {
         showDialog(
           context: context,
-          builder: (context) => AlertDialog(
-            title: Text('Allow Notifications'),
-            content: Text('Our app would like to send you notifications'),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Don\'t Allow',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 18,
-                  ),
-                ),
-              ),
-              TextButton(
-                  onPressed: () => AwesomeNotifications()
-                      .requestPermissionToSendNotifications()
-                      .then((_) => Navigator.pop(context)),
-                  child: Text(
-                    'Allow',
-                    style: TextStyle(
-                      color: Colors.blue,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+          builder: (context) =>
+              AlertDialog(
+                title: Text('Allow Notifications'),
+                content: Text('Our app would like to send you notifications'),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      'Don\'t Allow',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                      ),
                     ),
-                  ))
-            ],
-          ),
+                  ),
+                  TextButton(
+                      onPressed: () =>
+                          AwesomeNotifications()
+                              .requestPermissionToSendNotifications()
+                              .then((_) => Navigator.pop(context)),
+                      child: Text(
+                        'Allow',
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ))
+                ],
+              ),
         );
       }
     });
-  }
 
-  final myController = TextEditingController();
+    AwesomeNotifications().createdStream.listen((notification) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+        content: Text(
+          'Notification Created on ${notification.channelKey}',
+        ),
+      ));
+    });
+
+    AwesomeNotifications().actionStream.listen((notification) {
+      if (notification.channelKey == 'schedule_channel' && Platform.isIOS) {
+        AwesomeNotifications().getGlobalBadgeCounter().then((value) =>
+            AwesomeNotifications().setGlobalBadgeCounter(value - 1),);
+      }
+/**
+      Navigator.pushAndRemoveUntil(
+          context, MaterialPageRoute(builder: (_) => /**Page*/,), (route) =>
+      route.isFirst);
+    */
+    });
+  }
 
   @override
   dispose() {
-    myController.dispose();
+    AwesomeNotifications().actionSink.close();
+    AwesomeNotifications().createdSink.close();
     super.dispose();
   }
 

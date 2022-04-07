@@ -5,7 +5,8 @@ import 'package:src/my_calendar.dart';
 import 'package:src/my_notification.dart';
 
 void main() {
-  AwesomeNotifications().initialize('resource://drawable/res_notification_app_icon',
+  AwesomeNotifications().initialize(
+    'resource://drawable/res_notification_app_icon',
     [
       NotificationChannel(
         channelKey: 'schedule_channel',
@@ -33,25 +34,21 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.blue[800],
       ),
       body: Container(
-        child: MyNotification(),
+        child:
+          MyNotification(),
       ),
     );
-
   }
 
-  Widget buildCustomForm(){
+  Widget buildCustomForm() {
     return const MyCustomForm();
   }
 
-  Widget buildCalendar(){
+  Widget buildCalendar() {
     return const MyCalendar();
   }
 
-  Widget buildCustomNotification(){
+  Widget buildCustomNotification() {
     return const MyNotification();
   }
-
-
-
-
 }
