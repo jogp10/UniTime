@@ -110,7 +110,7 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ## Domain Model
 
-![](https://i.imgur.com/NdMtTwR.png)
+![](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/images/domainModel.png)
 
 ### - Description
 - **User** - User of the app that is identified by their email and password;
