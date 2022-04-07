@@ -63,11 +63,11 @@ class _MyCustomFormState extends State<MyCustomForm> {
           )
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {},
+/*      floatingActionButton: FloatingActionButton(onPressed: () {},
         child: const Text('click!'),
         backgroundColor: Colors.blue[300],
 
-      ),
+      ),*/
     );
   }
 
