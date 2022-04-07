@@ -123,3 +123,5 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ## Vertical prototype
 
+
+![notification-1](https://imgur.com/a/aLMIMQy "Notification-1") ![notification-2](https://imgur.com/a/u7eauEY "Notification-2")
