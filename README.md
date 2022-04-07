@@ -128,3 +128,13 @@ The following small features were implemented:
     - ##### Implementation:
  
 ![Imgur](https://i.imgur.com/t8oPaAGm.png) ![Imgur](https://i.imgur.com/fUmHEjLm.png)
+
+- #### Calendar - Example of a student's calendar, where they can schedule and view personal events and evaluation moments 
+    - ##### Implementation:
+
+![Imgur](https://i.imgur.com/BsepjKQ.png)
+
+- #### Grade Calculation Formula - Early example of a text form where the student can input the grade calculation formula of a certain UC
+    - ##### Implementation:
+ 
+![Imgur](https://i.imgur.com/cb7yoHK.png)![Imgur](https://i.imgur.com/NhFgS6Q.png)
