@@ -135,6 +135,14 @@ We also use two external packages - one that is used to retrieve all the informa
 
 ![Imgur](https://i.imgur.com/vzFcGTG.png)
 
+### Physical architecture
+When our Mobile App is being used, all of logic behind the maintenance, code, security and software architecture, of the available features, is done by the application's Student Management
+Logic Services. On the other hand, the Application Programming Interface (API) is percieved as a bridge, allowing
+the communication between the user's machine and the app's referred management services. With this in mind, to use the students personal information, these services access external data
+that's available in the Sigarra's database. This data is then stored in the server machine's Student Database.
+
+![Imgur](https://i.imgur.com/42MVStU.png)
+
 ### Vertical prototype
 The following small features were implemented:
 
