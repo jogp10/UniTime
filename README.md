@@ -123,7 +123,19 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ---
 
-## Vertical prototype
+## Architecture and Design
+
+### Logical architecture
+In order to provide a longer lasting and easier to maintain code, we divided our project into 3 main packages:
+- Mobile App GUI that is responsible for the app's visual components and user interactions;
+- Student Management Logic, composed of smaller packages (Calendar, Grades, Profile, UC) , is in charge of handling all the data accesses and modifications;
+- Database Schema is where all the data related to the app is stored.
+
+We also use two external packages - one that is used to retrieve all the information needed from Sigarra (Sigarra Database) and another that is responsible for sending notifications to the user's phone (Notification System).
+
+![Imgur](https://i.imgur.com/vzFcGTG.png)
+
+### Vertical prototype
 The following small features were implemented:
 
 - #### Notification - Example of a notification sent by UniTime
