@@ -36,7 +36,9 @@ class Home extends StatelessWidget {
       body: Column(
         children: <Widget>[
           ElevatedButton(
-            child: const Text("Notification"),
+            child: const Center(
+              child: Text("Notification"),
+            ),
             onPressed: () {
               Navigator.push(
                   context,
@@ -45,14 +47,18 @@ class Home extends StatelessWidget {
             },
           ),
           ElevatedButton(
-            child: const Text("Calendar"),
+            child: const Center(
+              child: Text("Calendar"),
+            ),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => buildCalendar()));
             },
           ),
           ElevatedButton(
-            child: const Text("Form"),
+            child: const Center(
+              child: Text("Form"),
+            ),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => buildCustomForm()));
