@@ -33,9 +33,32 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.blue[800],
       ),
-      body: Container(
-        child:
-          MyNotification(),
+      body: Column(
+        children: <Widget>[
+          ElevatedButton(
+            child: const Text("Notification"),
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => buildCustomNotification()));
+            },
+          ),
+          ElevatedButton(
+            child: const Text("Calendar"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => buildCalendar()));
+            },
+          ),
+          ElevatedButton(
+            child: const Text("Form"),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => buildCustomForm()));
+            },
+          ),
+        ],
       ),
     );
   }

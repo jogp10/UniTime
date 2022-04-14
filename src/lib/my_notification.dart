@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
-import 'package:src/my_calendar.dart';
 import 'package:src/notification.dart';
 
 class MyNotification extends StatefulWidget {
@@ -22,14 +21,14 @@ class _MyNotificationState extends State<MyNotification> {
           context: context,
           builder: (context) =>
               AlertDialog(
-                title: Text('Allow Notifications'),
-                content: Text('Our app would like to send you notifications'),
+                title: const Text('Allow Notifications'),
+                content: const Text('Our app would like to send you notifications'),
                 actions: [
                   TextButton(
                     onPressed: () {
                       Navigator.pop(context);
                     },
-                    child: Text(
+                    child: const Text(
                       'Don\'t Allow',
                       style: TextStyle(
                         color: Colors.grey,
@@ -42,7 +41,7 @@ class _MyNotificationState extends State<MyNotification> {
                           AwesomeNotifications()
                               .requestPermissionToSendNotifications()
                               .then((_) => Navigator.pop(context)),
-                      child: Text(
+                      child: const Text(
                         'Allow',
                         style: TextStyle(
                           color: Colors.blue,
@@ -92,8 +91,8 @@ class _MyNotificationState extends State<MyNotification> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.all(25),
-                child: TextButton(
+                margin: const EdgeInsets.all(25),
+                child: const TextButton(
                   child: Text(
                     'Notification',
                     style: TextStyle(fontSize: 20),
