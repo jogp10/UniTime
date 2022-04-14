@@ -146,6 +146,8 @@ that's available in the Sigarra's database. This data is then stored in the serv
 ### Vertical prototype
 The following small features were implemented:
 
+![APK](https://github.com/LEIC-ES-2021-22/2LEIC04T2/src/build/app/outputs/flutter-apk) 
+
 - #### Notification - Example of a notification sent by UniTime
     - ##### Implementation:
  
