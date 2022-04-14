@@ -146,7 +146,7 @@ that's available in the Sigarra's database. This data is then stored in the serv
 ### Vertical prototype
 The following small features were implemented:
 
-![APK](https://github.com/LEIC-ES-2021-22/2LEIC04T2/src/APK/) 
+![APK](https://github.com/LEIC-ES-2021-22/2LEIC04T2/tree/main/src/APK) 
 
 - #### Notification - Example of a notification sent by UniTime
     - ##### Implementation:
