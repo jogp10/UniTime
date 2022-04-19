@@ -110,16 +110,55 @@ todos os eventos que decorrerão ao longo do ano letivo (como exames, aulas, reu
 
 ## Domain Model
 
-![](https://i.imgur.com/NdMtTwR.png)
+![](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/images/domainModel.png)
 
 ### - Description
 - **User** - User of the app that is identified by their email and password;
 - **Calendar** - Academic calendar where the user can see all of their evaluation and personal events;
-- **Teacher** - Teacher of the faculty, identified by their name;
-- **UC** - Course Unit that's characterized by its information, grade formula and bibliography;
+- **Event** - Every event related to a user identified by a date;
+- **Personal** - Event not related to evaluations of UC's
 - **Evaluation** - Evaluation moment that occurrs on a certain date and where the user gets a certain grade.
+- **UC** - Course Unit that's characterized by its information, grade formula and bibliography;
+
 
 ---
 
-## Vertical prototype
+## Architecture and Design
 
+### Logical architecture
+In order to provide a longer lasting and easier to maintain code, we divided our project into 3 main packages:
+- Mobile App GUI that is responsible for the app's visual components and user interactions;
+- Student Management Logic, composed of smaller packages (Calendar, Grades, Profile, UC) , is in charge of handling all the data accesses and modifications;
+- Database Schema is where all the data related to the app is stored.
+
+We also use two external packages - one that is used to retrieve all the information needed from Sigarra (Sigarra Database) and another that is responsible for sending notifications to the user's phone (Notification System).
+
+![Imgur](https://i.imgur.com/vzFcGTG.png)
+
+### Physical architecture
+When our Mobile App is being used, all of logic behind the maintenance, code, security and software architecture, of the available features, is done by the application's Student Management
+Logic Services. On the other hand, the Application Programming Interface (API) is percieved as a bridge, allowing
+the communication between the user's machine and the app's referred management services. With this in mind, to use the students personal information, these services access external data
+that's available in the Sigarra's database. This data is then stored in the server machine's Student Database.
+
+![Imgur](https://i.imgur.com/42MVStU.png)
+
+### Vertical prototype
+The following small features were implemented:
+
+![APK](https://github.com/LEIC-ES-2021-22/2LEIC04T2/tree/main/src/APK) 
+
+- #### Notification - Example of a notification sent by UniTime
+    - ##### Implementation:
+ 
+![Imgur](https://i.imgur.com/t8oPaAGm.png) ![Imgur](https://i.imgur.com/fUmHEjLm.png)
+
+- #### Calendar - Example of a student's calendar, where they can schedule and view personal events and evaluation moments 
+    - ##### Implementation:
+
+![Imgur](https://i.imgur.com/BsepjKQ.png)
+
+- #### Grade Calculation Formula - Early example of a text form where the student can input the grade calculation formula of a certain UC
+    - ##### Implementation:
+ 
+![Imgur](https://i.imgur.com/cb7yoHK.png)![Imgur](https://i.imgur.com/NhFgS6Q.png)
