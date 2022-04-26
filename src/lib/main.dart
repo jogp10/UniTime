@@ -14,6 +14,7 @@ import 'package:uni/utils/constants.dart' as Constants;
 import 'package:uni/view/Pages/about_page_view.dart';
 import 'package:uni/view/Pages/bug_report_page_view.dart';
 import 'package:uni/view/Pages/bus_stop_next_arrivals_page.dart';
+import 'package:uni/view/Pages/calendar_page_view.dart';
 import 'package:uni/view/Pages/exams_page_view.dart';
 import 'package:uni/view/Pages/home_page_view.dart';
 import 'package:uni/view/Pages/logout_route.dart';
@@ -22,6 +23,7 @@ import 'package:uni/view/Pages/courses_page_view.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
+
 
 import 'controller/on_start_up.dart';
 import 'model/schedule_page_model.dart';
@@ -106,6 +108,9 @@ class MyAppState extends State<MyApp> {
               case '/' + Constants.navCourses:
                 return PageTransition.makePageTransition(
                   page: CoursesPageView(), settings:settings);
+              case '/' + Constants.navCalendar:
+                return PageTransition.makePageTransition(
+                  page: CalendarPageView(), settings: settings);
               case '/' + Constants.navLogOut:
                 return LogoutRoute.buildLogoutRoute();
             }
