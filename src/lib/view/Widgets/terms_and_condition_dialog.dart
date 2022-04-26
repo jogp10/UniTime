@@ -38,7 +38,7 @@ class TermsAndConditionDialog {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Mudança nos Termos e Condições da uni'),
+            title: Text('Mudança nos Termos e Condições da UniTime'),
             content: Column(
               children: [
                 Expanded(
