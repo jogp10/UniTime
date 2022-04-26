@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:uni/model/entities/course_unit.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
+import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:uni/view/Widgets/terms_and_conditions.dart';
+
+import '../../model/app_state.dart';
+import '../../model/entities/exam.dart';
+import '../Widgets/secondary_page_back_button.dart';
 
 class CoursesPageView extends StatefulWidget {
   @override
@@ -9,31 +16,20 @@ class CoursesPageView extends StatefulWidget {
 }
 
 /// Manages the 'UCs' section of the app.
-class CoursesPageViewState extends GeneralPageViewState {
+class CoursesPageViewState extends SecondaryPageViewState {
   @override
-  Widget getBody(BuildContext context) {
-    final MediaQueryData queryData = MediaQuery.of(context);
-    return ListView(
-      children: <Widget>[
-        Container(
-            child: SvgPicture.asset(
-          'assets/images/ni_logo.svg',
-          color: Theme.of(context).colorScheme.secondary,
-          width: queryData.size.height / 7,
-          height: queryData.size.height / 7,
-        )),
-        Center(
-            child: Padding(
-          padding: EdgeInsets.only(
-              left: queryData.size.width / 12,
-              right: queryData.size.width / 12,
-              top: queryData.size.width / 12,
-              bottom: queryData.size.width / 12),
-          child: Column(children: <Widget>[
-            TermsAndConditions(),
-          ]),
-        ))
-      ],
+  Widget build(BuildContext context) {
+    return this.getScaffold(
+        context,
+        this.bodyWrapper(context)
+    );
+  }
+
+  @override
+  Widget bodyWrapper(BuildContext context){
+    return  SecondaryPageBackButton(
+        context: context,
+        child: this.getBody(context)
     );
   }
 }
