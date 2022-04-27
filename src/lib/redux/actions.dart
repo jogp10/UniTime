@@ -164,3 +164,8 @@ class SetUserFaculties {
   List<String> faculties;
   SetUserFaculties(this.faculties);
 }
+
+class SetUserCourseUnits {
+  List<CourseUnit> courseUnits;
+  SetUserCourseUnits(this.courseUnits);
+}
