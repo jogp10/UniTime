@@ -34,7 +34,7 @@ class CalendarPageViewState extends SecondaryPageViewState {
             .toList();
       },
       builder: (context, exams) {
-        return Calendar();
+        return Calendar(exams);
       },
     );
   }
@@ -54,12 +54,17 @@ void calendarTapped(CalendarTapDetails calendarTapDetails){
 /// Manages the 'Exams' section in the user's personal area and 'Exams Map'.
 class Calendar extends StatelessWidget {
 
+  Calendar(this.exams);
+
+  final List<Exam> exams;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SfCalendar(
         initialDisplayDate: DateTime.now(),
         initialSelectedDate: DateTime.now(),
+        dataSource: MeetingDataSource(getAppointments(exams)),
         backgroundColor: Colors.black87,
         controller: _controller,
         todayHighlightColor: Colors.blue[600],
@@ -118,26 +123,7 @@ List<Appointment> getAppointments(List<Exam> exams){
         color: Colors.red,
         endTime: end));
   }
-
-  /*DateTime startTime = DateTime(today.year, today.month, today.day, 9, 0, 0);
-  DateTime endTime = startTime.add(const Duration(hours: 2));
-
-  meetings.add(Appointment(
-      startTime: startTime,
-      endTime: endTime,
-      subject: 'Evento Pessoal',
-      color: Colors.lightGreen
-  ));
-
-  startTime = DateTime(2022,4,29,13,0,0);
-  endTime = startTime.add(const Duration(hours: 2));
-
-  meetings.add(Appointment(
-      startTime: startTime,
-      endTime: endTime,
-      subject: 'Teste de LC',
-      color: Colors.red
-  ));*/
+  
   return meetings;
 }
 
