@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
@@ -5,8 +7,9 @@ import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:uni/model/entities/course_unit.dart';
 import 'package:uni/view/Widgets/back_button_exit_wrapper.dart';
 
+import '../../controller/networking/network_router.dart';
 import '../../model/app_state.dart';
-import '../Widgets/course_unit_card.dart';
+import '../../redux/actions.dart';
 
 class CourseUnitsPageView extends StatefulWidget {
   @override
@@ -15,17 +18,6 @@ class CourseUnitsPageView extends StatefulWidget {
 
 /// Manages the 'UCs' section of the app.
 class CourseUnitsPageViewState extends SecondaryPageViewState {
-  Widget buildCardContent(BuildContext context) {
-    return StoreConnector<AppState, List<dynamic>>(
-      converter: (store) {
-        final List<CourseUnit> units = store.state.content['courseUnits'];
-        return units;
-      },
-      builder: (context, units) {
-        return CourseUnitsList(courseUnits: units);
-      },
-    );
-  }
 }
 
 class CourseUnitsList extends StatelessWidget {
@@ -44,18 +36,8 @@ class CourseUnitsList extends StatelessWidget {
   }
 
   Widget createScrollableCardView(BuildContext context) {
-    return StoreConnector(
-        builder: (context, courseUnits) {
-          return Container(
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height,
-              child: ListView(
-                children: this.createUnitsWidget(courseUnits, context),
-              ));
-        },
-        converter: (store) => store.state.content['courseUnits']);
+    List<CourseUnit> courseUnits;
+    return null;
   }
 
   List<Widget> createUnitsWidget(List<CourseUnit> courseUnits,
@@ -70,6 +52,6 @@ class CourseUnitsList extends StatelessWidget {
   }
 
   Widget createUnitWidget(CourseUnit courseUnit, int i, BuildContext context) {
-    return CourseUnitCard();
+    return null;
   }
 }
