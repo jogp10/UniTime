@@ -30,4 +30,24 @@ class CourseUnit {
   this.result,
   this.ects});
 
+  /// Creates a new instance from a JSON object.
+  static CourseUnit fromJson(dynamic data) {
+    return CourseUnit(
+      id: data['ucurr_id'],
+      code: data['ucurr_codigo'],
+      abbreviation: data['ucurr_sigla'],
+      name: data['ucurr_nome'],
+      curricularYear: data['ano'],
+      occurrId: data['ocorr_id'],
+      semesterCode: data['per_codigo'],
+      semesterName: data['per_nome'],
+      type: data['tipo'],
+      status: data['estado'],
+      grade: data['resultado_melhor'],
+      ectsGrade: data['resultado_ects'],
+      result: data['resultado_insc'],
+      ects: data['creditos_ects']
+    );
+  }
+
 }
