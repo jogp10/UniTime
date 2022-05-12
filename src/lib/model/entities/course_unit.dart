@@ -50,4 +50,43 @@ class CourseUnit {
     );
   }
 
+  static List<CourseUnit> getUCs() {
+    List<CourseUnit> ucs;
+
+    ucs.add(CourseUnit(
+        id: 1,
+        code: 'LEIC011',
+        abbreviation: 'ES',
+        name: 'Engenharia de Software',
+        curricularYear: 2022,
+        occurrId: 4,
+        semesterCode: '2nd',
+        semesterName: 'segundo',
+        type: 'cadeirão',
+        status: 'state',
+        grade: '19',
+        ectsGrade: '5.6',
+        result: '17',
+        ects: 6
+    ));
+    ucs.add(CourseUnit(
+        id: 2,
+        code: 'LEIC012',
+        abbreviation: 'BD',
+        name: 'Base de Dados',
+        curricularYear: 2022,
+        occurrId: 7,
+        semesterCode: '2nd',
+        semesterName: 'segundo',
+        type: 'cadeirão',
+        status: 'state',
+        grade: '13',
+        ectsGrade: '3.6',
+        result: '13',
+        ects: 6
+    ));
+
+    return ucs;
+  }
+
 }
