@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # 2LEIC04T2
 
 ## Members
@@ -164,6 +165,8 @@ The following small features were implemented:
  
 ![Imgur](https://i.imgur.com/cb7yoHK.png)![Imgur](https://i.imgur.com/NhFgS6Q.png)
 =======
+=======
+>>>>>>> 8998b633c66a2fbdb927d053d5b5ab3a7d247e86
 # app_feup
 
 An app to make the lives of FEUP students easier.
@@ -207,5 +210,9 @@ To release the app, a few steps are required:
 - Run `flutter build appbundle lib/main.dart` to generate the bundle ready for upload
 - Make sure the Play Store's Content Rating is accurate before rolling out the app
 
+<<<<<<< HEAD
+[Here's the full guide to releasing a flutter application](https://flutter.dev/docs/deployment/android)
+>>>>>>> 8998b633c66a2fbdb927d053d5b5ab3a7d247e86
+=======
 [Here's the full guide to releasing a flutter application](https://flutter.dev/docs/deployment/android)
 >>>>>>> 8998b633c66a2fbdb927d053d5b5ab3a7d247e86
