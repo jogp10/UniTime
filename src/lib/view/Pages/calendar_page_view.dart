@@ -1,15 +1,8 @@
-import 'package:uni/controller/exam.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/model/entities/exam.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
-import 'package:uni/model/entities/exam.dart';
-import 'package:uni/view/Widgets/exam_page_title_filter.dart';
-import 'package:uni/view/Widgets/row_container.dart';
-import 'package:uni/view/Widgets/schedule_row.dart';
-import 'package:uni/view/Widgets/title_card.dart';
-import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
 class CalendarPageView extends StatefulWidget {
@@ -34,7 +27,7 @@ class CalendarPageViewState extends SecondaryPageViewState {
             .toList();
       },
       builder: (context, exams) {
-        return Calendar(exams);
+        return Calendar(exams: exams);
       },
     );
   }
@@ -42,21 +35,12 @@ class CalendarPageViewState extends SecondaryPageViewState {
 
 final CalendarController _controller = CalendarController();
 
-void calendarTapped(CalendarTapDetails calendarTapDetails){
-  if (_controller.view == CalendarView.month && calendarTapDetails.targetElement == CalendarElement.calendarCell){
-    _controller.view = CalendarView.day;
-  }
-  else if(_controller.view == CalendarView.day && calendarTapDetails.targetElement == CalendarElement.header){
-    _controller.view = CalendarView.month;
-  }
-}
 
-/// Manages the 'Exams' section in the user's personal area and 'Exams Map'.
+/// Manages the 'Calendário' section in the user's personal area.
 class Calendar extends StatelessWidget {
 
-  Calendar(this.exams);
-
   final List<Exam> exams;
+  Calendar({Key key, @required this.exams}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,11 +53,6 @@ class Calendar extends StatelessWidget {
         controller: _controller,
         todayHighlightColor: Colors.blue[600],
         view: CalendarView.month,
-
-        //onTap: calendarTapped,
-        scheduleViewSettings: ScheduleViewSettings(
-
-        ),
 
         monthViewSettings: const MonthViewSettings(
           showAgenda: true,
