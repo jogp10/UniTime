@@ -7,7 +7,7 @@ StepDefinitionGeneric TapButtonNTimesStep() {
   return when2<String, int, FlutterWorld>(
     'I tap the {string} button {int} times',
         (key, count, context) async {
-      final locator = find.byValueKey(key);
+      final locator = find.text(key);
       //print('############' + locator.toString());
       for (var i = 0; i < count; i += 1) {
         await FlutterDriverUtils.tap(context.world.driver, locator);
