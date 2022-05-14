@@ -53,6 +53,7 @@ class Calendar extends StatelessWidget {
         controller: _controller,
         todayHighlightColor: Colors.blue[600],
         view: CalendarView.month,
+        onTap: calendarTapped,
 
         monthViewSettings: const MonthViewSettings(
           showAgenda: true,
@@ -104,6 +105,12 @@ class Calendar extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void calendarTapped(CalendarTapDetails details) {
+    if(details.targetElement == CalendarElement.appointment ||
+    details.targetElement == CalendarElement.agenda) {
+    }
   }
 }
 
