@@ -134,6 +134,8 @@ class CourseUnit {
         specialWorks: '',
     );
     ucs.add(uc);
+    uc = CourseUnit(name:'chines');
+    ucs.add(uc);
     return ucs;
   }
 }
