@@ -12,8 +12,5 @@ void main() {
     CourseUnit uc2 = CourseUnit(name: 'DA');
     ucs = [uc1, uc2];
 
-    const testKey = Key('K');
-    final course_units = makeTestableWidget(child: )
-
   });
 }
