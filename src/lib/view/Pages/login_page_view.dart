@@ -185,6 +185,7 @@ class _LoginPageViewState extends State<LoginPageView> {
   /// Creates the widget for the username input.
   Widget createUsernameInput(BuildContext context) {
     return TextFormField(
+      key: Key('username'),
       style: TextStyle(color: Colors.white, fontSize: 20),
       enableSuggestions: false,
       autocorrect: false,
@@ -205,6 +206,7 @@ class _LoginPageViewState extends State<LoginPageView> {
   /// Creates the widget for the password input.
   Widget createPasswordInput() {
     return TextFormField(
+        key: Key('password'),
         style: TextStyle(color: Colors.white, fontSize: 20),
         enableSuggestions: false,
         autocorrect: false,
@@ -246,6 +248,7 @@ class _LoginPageViewState extends State<LoginPageView> {
       child: SizedBox(
         height: queryData.size.height / 16,
         child: ElevatedButton(
+          key: Key('loginButton'),
           style: ElevatedButton.styleFrom(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(25),
