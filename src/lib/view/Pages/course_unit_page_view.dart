@@ -49,7 +49,7 @@ class CourseUnitPageViewState extends SecondaryPageViewState {
 
       body:
           ListView.builder(
-          itemCount:  5,
+          itemCount:  infoUc.length~/2,
           itemBuilder: (context, index) {
             return Card(
               child: Padding(
@@ -81,16 +81,26 @@ class CourseUnitPageViewState extends SecondaryPageViewState {
   }
   loadUcInfo(){
     List<String> aux = [];
-    aux.add('Learning Result');
-    aux.add(uc.learningResult);
-    aux.add('Evaluation Type');
-    aux.add(uc.evaluationType);
-    aux.add('Evaluation Comp');
-    aux.add(uc.evaluationComp);
-    aux.add('Formula');
-    aux.add(uc.formula);
-    aux.add('Special Work');
-    aux.add(uc.specialWorks);
+    if(uc.learningResult!='') {
+      aux.add('Resultados da aprendizagem');
+      aux.add(uc.learningResult);
+    }
+    if(uc.evaluationType!='') {
+      aux.add('Avaliação');
+      aux.add(uc.evaluationType);
+    }
+    if(uc.evaluationComp!='') {
+      aux.add('Composição da Avaliação');
+      aux.add(uc.evaluationComp);
+    }
+    if(uc.formula!='') {
+      aux.add('Fórmula');
+      aux.add(uc.formula);
+    }
+    if(uc.specialWorks!='') {
+      aux.add('Trabalhos especiais');
+      aux.add(uc.specialWorks);
+    }
     this.infoUc = aux;
 
   }

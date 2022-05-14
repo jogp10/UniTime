@@ -4,8 +4,7 @@ import 'package:gherkin/gherkin.dart';
 StepDefinitionGeneric PageShown() {
   return then1<String, FlutterWorld>(
     'I expect that page {string} to be present',
-        (string, context) async {
-    },
+        (string, context) async {},
   );
 }
 
