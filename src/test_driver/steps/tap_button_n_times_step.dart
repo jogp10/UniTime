@@ -15,3 +15,13 @@ StepDefinitionGeneric TapButtonNTimesStep() {
     },
   );
 }
+
+StepDefinitionGeneric LoggedIn() {
+  return given<FlutterWorld>(
+    'I am logged in',
+        (context) async {
+      final locator = find.byValueKey('fotoicon');
+      FlutterDriverUtils.isPresent(context.world.driver, locator);
+    },
+  );
+}
