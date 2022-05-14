@@ -8,3 +8,11 @@ StepDefinitionGeneric PageShown() {
     },
   );
 }
+
+StepDefinitionGeneric GivenPage() {
+  return given1<String, FlutterWorld>(
+    'I expect that page {string} to be present',
+        (string, context) async {
+    },
+  );
+}

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
+import 'package:uni/model/entities/course.dart';
 import 'package:uni/model/entities/course_unit.dart';
 import 'package:uni/view/Pages/course_unit_page_view.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,7 +13,7 @@ import 'course_units_page_view_test.mocks.dart';
 void main() {
   testWidgets('courseUnit title display page', (WidgetTester tester) async {
     final widget = makeTestableWidget(
-        child: CourseUnitPageView(uc: MockCourseUnit()));
+        child: CourseUnitPageView(uc: CourseUnit.getUCs()[0]));
     await tester.pumpWidget(widget);
     final titleFinder = find.descendant(
         of: find.byType(ListView), matching: find.byType(Card));
@@ -21,7 +22,7 @@ void main() {
 
   testWidgets('courseUnit information sections display page', (WidgetTester tester) async {
     final widget = makeTestableWidget(
-        child: CourseUnitPageView(uc: MockCourseUnit()));
+        child: CourseUnitPageView(uc: CourseUnit.getUCs()[0]));
     await tester.pumpWidget(widget);
     final cardFinder = find.descendant(
         of: find.byType(ListView), matching: find.byType(Card));
