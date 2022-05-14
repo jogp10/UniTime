@@ -30,7 +30,11 @@ class CourseUnitsPageViewState extends SecondaryPageViewState {
                   child: ListTile(
 
                     onTap: (){
-                      Navigator.of(context).push(PageTransition.makePageTransition(page: CourseUnitPageView()));
+                      Navigator.of(context).push(
+                          PageTransition.makePageTransition(
+                              page: CourseUnitPageView(uc : ucs[index])
+                          )
+                      );
                     },
                     //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
                     title: Text(ucs[index].name),
