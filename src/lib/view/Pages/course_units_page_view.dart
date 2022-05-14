@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uni/view/Pages/calendar_page_view.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:uni/model/entities/course_unit.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
@@ -21,18 +22,25 @@ class CourseUnitsPageViewState extends SecondaryPageViewState {
       body: ListView.builder(
           itemCount: ucs.length,
           itemBuilder: (context, index) {
-            return Card(
-                child: ListTile(
-                  onTap: (){},//(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
-                  title: Text(ucs[index].name),
-                  textColor: Colors.blue,
-                )
+            return Padding(
+              padding: const EdgeInsets.symmetric(
+                  vertical: 1.0, horizontal: 8.0),
+              child: Card(
+                  child: ListTile(
+
+                    onTap: (){
+                      Navigator.of(context).push(PageTransition.makePageTransition(page: CourseUnitPageView()));
+                    },
+                    //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
+                    title: Text(ucs[index].name),
+                    textColor: Colors.blue,
+                  )
+              ),
             );
           }
       ),
     );
   }
+
+
 }
-
-
-
