@@ -12,7 +12,7 @@ import 'course_units_page_view_test.mocks.dart';
 void main() {
   testWidgets('courseUnit title display page', (WidgetTester tester) async {
     final widget = makeTestableWidget(
-        child: CourseUnitPageView());
+        child: CourseUnitPageView(uc: MockCourseUnit()));
     await tester.pumpWidget(widget);
     final titleFinder = find.descendant(
         of: find.byType(ListView), matching: find.byType(Card));
