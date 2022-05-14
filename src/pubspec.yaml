@@ -19,35 +19,37 @@ dependencies:
   flutter:
     sdk: flutter
   html: ^0.15.0
-  flutter_redux: ^0.10.0
-  redux_thunk: ^0.4.0
+  flutter_redux: ^0.7.0
+  redux_thunk: ^0.3.0
   http: ^0.13.0
   query_params: ^0.6.1
-  tuple: ^2.0.0
+  tuple: ^1.0.3
   shared_preferences: ^2.0.3
   encrypt: ^5.0.0-beta.1
   path_provider: ^2.0.0
   sqflite: ^2.0.0
   path: ^1.8.0
   cached_network_image: ^3.0.0-nullsafety
-  flutter_svg: ^1.0.3
+  flutter_svg: ^0.21.0-nullsafety.0
   synchronized: ^3.0.0
   toast: ^0.1.5
   image: ^3.0.0-nullsafety.0
-  connectivity: ^3.0.6
-  logger: ^1.1.0
+  connectivity: ^0.4.4
+  logger: ^0.9.4
   url_launcher: ^6.0.2
   flutter_markdown: ^0.6.0
   intl: ^0.17.0
   crypto: ^3.0.1
-  add_2_calendar: ^2.1.3
-  sentry_flutter: ^6.5.1
-  email_validator: ^2.0.1
+  add_2_calendar: ^1.4.0
+  sentry_flutter: ^5.0.0
+  email_validator: ^1.0.6
   syncfusion_flutter_calendar: ^20.1.47
 
   flutter_gherkin: ^2.0.0
+  steps: ^1.0.1
   glob: ^2.0.2
-
+  test: ^1.19.5
+  flutter_hooks: ^0.18.3
   mockito: ^5.1.0
 
   # The following adds the Cupertino Icons font to your application.
@@ -63,7 +65,7 @@ dev_dependencies:
   test: any
   mockito:
   flutter_launcher_icons: ^0.9.0
-  flutter_native_splash: ^2.1.6
+  flutter_native_splash: ^1.0.3
   build_runner: ^2.1.7
 
 flutter_icons:
