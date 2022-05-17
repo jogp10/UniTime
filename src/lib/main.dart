@@ -18,6 +18,8 @@ import 'package:uni/view/Pages/calendar_page_view.dart';
 import 'package:uni/view/Pages/exams_page_view.dart';
 import 'package:uni/view/Pages/home_page_view.dart';
 import 'package:uni/view/Pages/logout_route.dart';
+import 'package:uni/view/Pages/media_page_view.dart';
+import 'package:uni/view/Pages/medias_page_view.dart';
 import 'package:uni/view/Pages/splash_page_view.dart';
 import 'package:uni/view/Pages/course_units_page_view.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
@@ -109,6 +111,10 @@ class MyAppState extends State<MyApp> {
               case '/' + Constants.navCalendar:
                 return PageTransition.makePageTransition(
                   page: CalendarPageView(), settings: settings);
+              case '/' + Constants.navMedia:
+                  return PageTransition.makePageTransition(
+                    page: MediasPageView(), settings: settings
+                  );
               case '/' + Constants.navLogOut:
                 return LogoutRoute.buildLogoutRoute();
             }
