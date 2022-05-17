@@ -79,16 +79,8 @@ class MediaPageViewState extends SecondaryPageViewState {
   }
   loadUcInfo(){
     List<String> aux = [];
-    if(uc.learningResult!='') {
-      aux.add('Exames');
-      aux.add(uc.learningResult);
-    }
-    if(uc.evaluationType!='') {
-      aux.add('Testes');
-      aux.add(uc.evaluationType);
-    }
     if(uc.evaluationComp!='') {
-      aux.add('Projetos');
+      aux.add('Fórmula');
       aux.add(uc.evaluationComp);
     }
     this.infoUc = aux;

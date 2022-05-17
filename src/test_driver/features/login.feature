@@ -18,3 +18,9 @@ Feature: Open pages
     When I open the drawer
     When I tap the "Área Pessoal" button 1 times
     Then I expect the text "Área Pessoal" to be present
+
+  Scenario: Access the "Área Pessoal" page
+    Given I am logged in
+    When I open the drawer
+    When I tap the "Média" button 1 times
+    Then I expect the text "Engenharia de Software" to be present
