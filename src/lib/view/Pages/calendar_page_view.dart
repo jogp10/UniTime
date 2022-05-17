@@ -45,65 +45,76 @@ class Calendar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SfCalendar(
-        initialDisplayDate: DateTime.now(),
-        initialSelectedDate: DateTime.now(),
-        dataSource: MeetingDataSource(getAppointments(exams)),
-        backgroundColor: Colors.black87,
-        controller: _controller,
-        todayHighlightColor: Colors.blue[600],
-        view: CalendarView.month,
-        onTap: calendarTapped,
+    return Container(
+        child: Column(
+          children: [Scaffold(
+            body: SfCalendar(
+              initialDisplayDate: DateTime.now(),
+              initialSelectedDate: DateTime.now(),
+              dataSource: MeetingDataSource(getAppointments(exams)),
+              backgroundColor: Colors.black87,
+              controller: _controller,
+              todayHighlightColor: Colors.blue[600],
+              view: CalendarView.month,
+              onTap: calendarTapped,
 
-        monthViewSettings: const MonthViewSettings(
-          showAgenda: true,
-          agendaStyle: AgendaStyle(
-            backgroundColor: Colors.white10,
-            dayTextStyle: TextStyle(
-              color: Colors.blue
+              monthViewSettings: const MonthViewSettings(
+                showAgenda: true,
+                agendaStyle: AgendaStyle(
+                    backgroundColor: Colors.white10,
+                    dayTextStyle: TextStyle(
+                        color: Colors.blue
+                    ),
+                    appointmentTextStyle: TextStyle(
+                        fontSize: 16
+                    ),
+                    dateTextStyle: TextStyle(
+                        color: Colors.white
+                    )
+                ),
+                monthCellStyle: MonthCellStyle(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                  leadingDatesTextStyle: TextStyle(
+                      color: Colors.white24
+                  ),
+                  trailingDatesTextStyle: TextStyle(
+                      color: Colors.white24
+                  ),
+                ),
+
+              ),
+
+              showNavigationArrow: true,
+              viewHeaderStyle: ViewHeaderStyle(
+                  dayTextStyle: const TextStyle(
+                    color: Colors.white,
+                  ),
+
+                  dateTextStyle: const TextStyle(
+                      color: Colors.blue
+                  )
+              ),
+              headerStyle: CalendarHeaderStyle(
+                  textAlign: TextAlign.center,
+                  backgroundColor: Colors.blue[700],
+                  textStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.bold
+                  )
+              ),
             ),
-            appointmentTextStyle: TextStyle(
-              fontSize: 16
-            ),
-            dateTextStyle: TextStyle(
-              color: Colors.white
-            )
           ),
-          monthCellStyle: MonthCellStyle(
-            textStyle: TextStyle(
-              color: Colors.white,
-            ),
-            leadingDatesTextStyle: TextStyle(
-                color: Colors.white24
-            ),
-            trailingDatesTextStyle: TextStyle(
-                color: Colors.white24
-            ),
-          ),
-
-        ),
-
-        showNavigationArrow: true,
-        viewHeaderStyle: ViewHeaderStyle(
-            dayTextStyle: const TextStyle(
-              color: Colors.white,
-            ),
-
-            dateTextStyle: const TextStyle(
-              color: Colors.blue
-            )
-        ),
-        headerStyle: CalendarHeaderStyle(
-            textAlign: TextAlign.center,
+          FloatingActionButton(
+            onPressed: null,
+            tooltip: 'Adicionar um novo evento',
             backgroundColor: Colors.blue[700],
-            textStyle: const TextStyle(
-                color: Colors.white,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold
-            )
-        ),
-      ),
+            child: Icon(Icons.add),
+          )
+            ])
+
     );
   }
 
