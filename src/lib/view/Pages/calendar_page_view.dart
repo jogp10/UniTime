@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
+import 'package:uni/view/Widgets/page_transition.dart';
+
+import 'new_event_page_view.dart';
 
 class CalendarPageView extends StatefulWidget {
   @override
@@ -109,8 +112,9 @@ class Calendar extends StatelessWidget {
           ),
           FloatingActionButton(
             onPressed: null,
-            tooltip: 'Adicionar um novo evento',
+            tooltip: 'Adicionar Evento',
             backgroundColor: Colors.blue[700],
+            elevation: 6,
             child: Icon(Icons.add),
           )
             ])
