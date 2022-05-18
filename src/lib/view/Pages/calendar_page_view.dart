@@ -104,14 +104,6 @@ class Calendar extends StatelessWidget {
             )
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-
-        tooltip: 'Adicionar Evento',
-        backgroundColor: Colors.blue[700],
-        focusColor: Colors.white,
-        autofocus: true,
-        child: const Icon(Icons.add),
-      ),
     );
   }
 
