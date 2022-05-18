@@ -111,13 +111,7 @@ class Calendar extends StatelessWidget {
             ),
           ),
           FloatingActionButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                PageTransition.makePageTransition(
-                  page: NewEventPageView()
-                )
-              );
-            },
+            onPressed: null,
             tooltip: 'Adicionar Evento',
             backgroundColor: Colors.blue[700],
             elevation: 6,
