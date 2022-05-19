@@ -17,7 +17,6 @@ class CourseUnitsPageView extends StatefulWidget {
 
 /// Manages the 'UCs' section of the app.
 class CourseUnitsPageViewState extends SecondaryPageViewState {
-  List<String> infoUc;
   @override
   Widget getBody(BuildContext context) {
     return StoreConnector<AppState, List<dynamic>>(

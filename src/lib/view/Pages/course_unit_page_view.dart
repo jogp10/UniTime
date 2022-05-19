@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
-
-import 'package:mockito/annotations.dart';
-import 'package:mockito/mockito.dart';
 import 'package:uni/model/entities/course_unit.dart';
-
-import '../Widgets/secondary_page_back_button.dart';
 
 class CourseUnitPageView extends StatefulWidget {
   CourseUnit uc;
