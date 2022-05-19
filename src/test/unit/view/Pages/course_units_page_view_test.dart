@@ -8,12 +8,30 @@ import '../../../testable_widget.dart';
 
 @GenerateMocks([CourseUnit])
 void main() {
-  testWidgets('courseUnits display page', (WidgetTester tester) async {
-    final widget = makeTestableWidget(
-        child: CourseUnitsPageView());
-    await tester.pumpWidget(widget);
-    final cardFinder = find.descendant(
-        of: find.byType(ListView), matching: find.byType(Card));
-    expect(cardFinder, findsNWidgets(2));
+  group('CourseUnitsPage', () {
+    final ucName = 'SOPE';
+
+
+    testWidgets('When given an empty list', (WidgetTester tester) async {
+      final widget = makeTestableWidget(
+      child: CourseList(ucs: <CourseUnit>[]));
+      await tester.pumpWidget(widget);
+      expect(find.byType(Card), findsNothing);
+    });
+
+    testWidgets('When given a single course unit', (WidgetTester tester) async {
+      final courseUnit = CourseUnit(name: ucName);
+      final courseUnitList = [
+        courseUnit,
+      ];
+      final widget = makeTestableWidget(
+          child: CourseList(
+            ucs: courseUnitList,
+          ));
+
+      await tester.pumpWidget(widget);
+
+      expect(find.byType(Card), findsOneWidget);
+    });
   });
 }
