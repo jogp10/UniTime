@@ -12,7 +12,6 @@ void main() {
     final ucName = 'SOPE';
 
 
-
     testWidgets('When given an empty list', (WidgetTester tester) async {
       final widget = makeTestableWidget(
       child: CourseList(ucs: <CourseUnit>[]));
