@@ -7,7 +7,7 @@ class MediaPageView extends StatefulWidget {
   CourseUnit uc;
 
   @override
-  State<StatefulWidget> createState() => MediaPageViewState();
+  State<StatefulWidget> createState() => MediaPageViewState(uc: uc);
 
   MediaPageView({this.uc});
 }
