@@ -51,14 +51,65 @@ class MediasList extends StatelessWidget {
                   child: ListTile(
 
                     onTap: () {
-                      Navigator.of(context).push(
-                          PageTransition.makePageTransition(
-                              page: MediaPageView(uc: ucs[index])
-                          )
-                      );
+                      if(ucs[index].grade!=''){
+                        AlertDialog alert = AlertDialog(
+                          title: Text(
+                            'This Course Unit is already graded.'
+                                ,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        );
+                        showDialog(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return alert;
+                          },
+                        );
+                      }
+                      else{
+                        Navigator.of(context).push(
+                            PageTransition.makePageTransition(
+                                page: MediaPageView(uc: ucs[index])
+                            )
+                        );
+                      }
+
                     },
                     //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
-                    title: Text(ucs[index].name),
+                    title: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+
+                          Text(ucs[index].name,
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.blue
+                        ),
+                          ),
+                          ucs[index].grade!=''? Text(
+
+                              'Grade : ' + ucs[index].grade,
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.green)
+                          ) : Text(
+
+                              '',
+                              style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white)
+                          )
+
+                        ]
+                    ),
+
                     textColor: Colors.blue,
                   )
               ),
