@@ -22,6 +22,7 @@ void main() {
         child: CourseUnitPageView(uc: uc));
     await tester.pumpWidget(widget);
     try {
+      if(uc.teachers!='') await tester.scrollUntilVisible(find.text("Professores"), 500);
       if(uc.learningResult!='') await tester.scrollUntilVisible(find.text("Resultados da aprendizagem"), 500);
       if(uc.evaluationType!='') await tester.scrollUntilVisible(find.text("Avaliação"), 500);
       if(uc.evaluationComp!='') await tester.scrollUntilVisible(find.text("Composição da Avaliação"), 500);
