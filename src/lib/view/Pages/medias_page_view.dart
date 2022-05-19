@@ -97,7 +97,7 @@ class MediasList extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.green)
+                                  color: Colors.white54)
                           ) : Text(
 
                               '',
