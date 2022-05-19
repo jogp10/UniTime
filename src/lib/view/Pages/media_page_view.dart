@@ -18,23 +18,21 @@ import '../Widgets/page_transition.dart';
 import 'exams_page_view.dart';
 
 class MediaPageView extends StatefulWidget {
-  CourseUnit uc;
+
 
 
   @override
-  State<StatefulWidget> createState() => MediaPageViewState(ucs: uc);
+  State<StatefulWidget> createState() => MediaPageViewState();
 
-  MediaPageView({this.uc});
+
 
 }
 
 /// Manages the 'UCs' section of the app.
 class MediaPageViewState extends SecondaryPageViewState {
-  CourseUnit ucs;
-  List<String> infoUc;
 
-  MediaPageViewState({this.ucs
-  });
+
+
   @override
   Widget getBody(BuildContext context) {
     return StoreConnector<AppState, List<dynamic>>(
@@ -67,13 +65,13 @@ class CourseList extends StatelessWidget {
               child: Card(
                   child: ListTile(
 
-                    onTap: (){
+                    /*onTap: (){
                       Navigator.of(context).push(
                           PageTransition.makePageTransition(
-                              page: MediaPageView(uc : ucs[index])
+                              page: CourseUnitPageView(uc : ucs[index])
                           )
                       );
-                    },
+                    },*/
                     //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
                     title: Text(ucs[index].name),
                     textColor: Colors.blue,

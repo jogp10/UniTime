@@ -34,13 +34,13 @@ class MediasPageViewState extends SecondaryPageViewState {
               child: Card(
                   child: ListTile(
 
-                    onTap: (){
+                   /* onTap: (){
                       Navigator.of(context).push(
                           PageTransition.makePageTransition(
                               page: MediaPageView(uc : ucs[index])
                           )
                       );
-                    },
+                    },*/
                     //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
                     title: Text(ucs[index].name),
                     textColor: Colors.blue,
