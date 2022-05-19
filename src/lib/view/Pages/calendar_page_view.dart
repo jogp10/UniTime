@@ -48,83 +48,85 @@ class Calendar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Column(
-          children: [Scaffold(
-            body: SfCalendar(
-              initialDisplayDate: DateTime.now(),
-              initialSelectedDate: DateTime.now(),
-              dataSource: MeetingDataSource(getAppointments(exams)),
-              backgroundColor: Colors.black87,
-              controller: _controller,
-              todayHighlightColor: Colors.blue[600],
-              view: CalendarView.month,
-              onTap: calendarTapped,
+    return Scaffold(
+        body: SfCalendar(
+          initialDisplayDate: DateTime.now(),
+          initialSelectedDate: DateTime.now(),
+          dataSource: MeetingDataSource(getAppointments(exams)),
+          backgroundColor: Colors.black87,
+          controller: _controller,
+          todayHighlightColor: Colors.blue[600],
+          view: CalendarView.month,
+          onTap: calendarTapped,
 
-              monthViewSettings: const MonthViewSettings(
-                showAgenda: true,
-                agendaStyle: AgendaStyle(
-                    backgroundColor: Colors.white10,
-                    dayTextStyle: TextStyle(
-                        color: Colors.blue
-                    ),
-                    appointmentTextStyle: TextStyle(
-                        fontSize: 16
-                    ),
-                    dateTextStyle: TextStyle(
-                        color: Colors.white
-                    )
+          monthViewSettings: const MonthViewSettings(
+            showAgenda: true,
+            agendaStyle: AgendaStyle(
+                backgroundColor: Colors.white10,
+                dayTextStyle: TextStyle(
+                    color: Colors.blue
                 ),
-                monthCellStyle: MonthCellStyle(
-                  textStyle: TextStyle(
-                    color: Colors.white,
-                  ),
-                  leadingDatesTextStyle: TextStyle(
-                      color: Colors.white24
-                  ),
-                  trailingDatesTextStyle: TextStyle(
-                      color: Colors.white24
-                  ),
+                appointmentTextStyle: TextStyle(
+                    fontSize: 16
                 ),
-
+                dateTextStyle: TextStyle(
+                    color: Colors.white
+                )
+            ),
+            monthCellStyle: MonthCellStyle(
+              textStyle: TextStyle(
+                color: Colors.white,
               ),
-
-              showNavigationArrow: true,
-              viewHeaderStyle: ViewHeaderStyle(
-                  dayTextStyle: const TextStyle(
-                    color: Colors.white,
-                  ),
-
-                  dateTextStyle: const TextStyle(
-                      color: Colors.blue
-                  )
+              leadingDatesTextStyle: TextStyle(
+                  color: Colors.white24
               ),
-              headerStyle: CalendarHeaderStyle(
-                  textAlign: TextAlign.center,
-                  backgroundColor: Colors.blue[700],
-                  textStyle: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20.0,
-                      fontWeight: FontWeight.bold
-                  )
+              trailingDatesTextStyle: TextStyle(
+                  color: Colors.white24
               ),
             ),
-          ),
-          FloatingActionButton(
-            onPressed: null,
-            tooltip: 'Adicionar Evento',
-            backgroundColor: Colors.blue[700],
-            elevation: 6,
-            child: Icon(Icons.add),
-          )
-            ])
 
+          ),
+
+          showNavigationArrow: true,
+          viewHeaderStyle: ViewHeaderStyle(
+              dayTextStyle: const TextStyle(
+                color: Colors.white,
+              ),
+
+              dateTextStyle: const TextStyle(
+                  color: Colors.blue
+              )
+          ),
+          headerStyle: CalendarHeaderStyle(
+              textAlign: TextAlign.center,
+              backgroundColor: Colors.blue[700],
+              textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold
+              )
+          ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).push(
+                PageTransition.makePageTransition(
+                    page: NewEventPageView()
+                ),
+            );
+          },
+          tooltip: 'Adicionar Evento',
+          backgroundColor: Colors.blue[700],
+          elevation: 6,
+          child: Icon(Icons.add),
+        )
     );
   }
 
   void calendarTapped(CalendarTapDetails details) {
     if(details.targetElement == CalendarElement.appointment ||
     details.targetElement == CalendarElement.agenda) {
+      details.date;
     }
   }
 }
