@@ -21,8 +21,19 @@ class CourseUnitsPageViewState extends SecondaryPageViewState {
   Widget getBody(BuildContext context) {
     return StoreConnector<AppState, List<dynamic>>(
       converter: (store) {
+        final DateTime startFirstSemester = DateTime(store.state.content['currentTime'].year, 8);
+        final DateTime startSecondSemester = DateTime(store.state.content['currentTime'].year, 2);
+        final bool firstSemester = startFirstSemester.month<=store.state.content['currentTime'].month && store.state.content['currentTime'].month<startSecondSemester.month;
         final List<CourseUnit> ucs = store.state.content['currUcs'];
-        return ucs;
+        final List<CourseUnit> filteredUCS = [];
+        for(var i=0; i<ucs.length; i++) {
+          if(firstSemester && ucs[i].semesterCode=='1S') {
+            filteredUCS.add(ucs[i]);
+          } else if (!firstSemester && ucs[i].semesterCode=='2S') {
+            filteredUCS.add(ucs[i]);
+          }
+        }
+        return filteredUCS;
       },
       builder: (context, ucs) {
         return CourseList(ucs: ucs);
