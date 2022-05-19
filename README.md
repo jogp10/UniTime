@@ -162,3 +162,15 @@ The following small features were implemented:
     - ##### Implementation:
  
 ![Imgur](https://i.imgur.com/cb7yoHK.png)![Imgur](https://i.imgur.com/NhFgS6Q.png)
+
+### Project Management
+You can find below information and references related with the project management in our team: 
+* Backlog management: Product backlog and Iteration backlog in a [Github Projects board](https://github.com/LEIC-ES-2021-22/2LEIC04T2/projects/1);
+* Release management: [v0](https://github.com/LEIC-ES-2021-22/2LEIC04T2/releases/tag/v0.0.1-alpha), [v1](https://github.com/LEIC-ES-2021-22/2LEIC04T2/releases/tag/v1.0.0), v2, v3;
+* Iteration planning and retrospectives:
+  * Plans:
+    * First iteration begin ![Imgur](https://i.imgur.com/QNAxjy5.png)
+    * First iteration end ![Imgur](https://i.imgur.com/brje6p9.png)
+  * Retrospectives:
+    *  [Iteration 1](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/docs/retrospective1.md);
+

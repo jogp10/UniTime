@@ -15,7 +15,7 @@ class CourseUnit {
   String result;
   num ects;
 
-  List<String> teachers;
+  String teachers;
   String learningResult;
   String program;
   String evaluationType;
@@ -80,10 +80,8 @@ class CourseUnit {
 
   static List<CourseUnit> getUCs() {
     List<CourseUnit> ucs = [];
-    List<String> teachers = [];
 
-    teachers.add('Pedro Manuel Pinto Ribeiro');
-    teachers.add('Ana Paula Cunha da Rocha');
+
     CourseUnit uc = CourseUnit.fromSigarra(
       id: 1,
       code: 'LEIC011',
@@ -99,7 +97,7 @@ class CourseUnit {
       ectsGrade: '5.6',
       result: '17',
       ects: 6,
-      teachers: teachers,
+      teachers: 'Pedro Manuel Pinto Ribeiro \nAna Paula Cunha da Rocha',
       learningResult: 'No final da unidade curricular, os estudantes deverão ter competência para: modelar problemas recorrendo ao paradigma da orientação por objetos; resolver problemas fazendo uso de tipos de dados abstratos e estruturas de dados simples lineares e não lineares.',
       evaluationType: 'Avaliação distribuída sem exame final ',
       evaluationComp: 'Designação\tPeso(%)\nTeste\t60,00\nTrabalho laboratorial\t40,00\n  Total:\t100,00',
@@ -108,9 +106,6 @@ class CourseUnit {
     );
     ucs.add(uc);
 
-    teachers.clear();
-    teachers.add('Ademar Manuel Teixeira de Aguiar');
-    teachers.add('João Carlos Pascoal Faria');
     uc = CourseUnit.fromSigarra(
         id: 2,
         code: 'LEIC012',
@@ -126,7 +121,7 @@ class CourseUnit {
         ectsGrade: '3.6',
         result: '13',
         ects: 6,
-        teachers: teachers,
+        teachers: 'Ademar Manuel Teixeira de Aguiar \nJoão Carlos Pascoal Faria',
         learningResult: 'No final da unidade curricular, os estudantes deverão ser capazes de:\n\tdescrever os princípios, conceitos e práticas da engenharia de software e do ciclo de vida do software;\n\tconhecer e saber aplicar as técnicas e ferramentas necessárias para executar e gerir as várias atividades do processo de desenvolvimento de software de qualidade;\n\texplicar os métodos e processos de construção de diferentes tipos de sistemas de software.',
         evaluationType: 'Avaliação distribuída com exame final ',
         evaluationComp: 'Designação\tPeso(%)\nTrabalho escrito\t25,00\nTrabalho prático\t30,00\nExame\t35,00\nParticipacao presencial\t10,00\n  Total:\t100,00',
