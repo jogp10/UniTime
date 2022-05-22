@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:uni/model/entities/course_unit.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
-
+import 'package:html/parser.dart' as parser;
+import 'package:http/http.dart' as http;
 import '../../model/app_state.dart';
 import '../Widgets/page_transition.dart';
 import 'course_unit_page_view.dart';
@@ -150,10 +152,15 @@ class CourseList extends StatelessWidget {
                         vertical: 1.0, horizontal: 8.0),
                     child: Card(
                         child: ListTile(
-                          onTap: () {
-                            Navigator.of(context).push(
+                          onTap: () async {
+                            final response = await extractData();
+                            print(response[0]);
+                            print(response[1]);
+                            print(response[2]);
+
+                            /*Navigator.of(context).push(
                                 PageTransition.makePageTransition(
-                                    page: CourseUnitPageView(uc: ucs3[index])));
+                                    page: CourseUnitPageView(uc: ucs3[index])));*/
                           },
                           //(PageTransition.makePageTransition(page: CourseUnitPageView(), settings: )) {},
                           title: Text(
@@ -170,5 +177,42 @@ class CourseList extends StatelessWidget {
           )
         ],
         ));
+  }
+
+  Future<List<String>> extractData() async {
+//Getting the response from the targeted url
+    final response =
+    await http.Client().get(Uri.parse('https://sigarra.up.pt/feup/pt/ucurr_geral.ficha_uc_view?pv_ocorrencia_id=484404'));
+    //Status Code 200 means response has been received successfully
+    if (response.statusCode == 200) {
+      //Getting the html document from the response
+      var document = parser.parse(response.body);
+      try {
+        //Scraping the first article title
+        var responseString1 = document
+            .getElementById('conteudoinner').children[48];
+
+
+
+        //Scraping the second article title
+        var responseString2 = document.querySelector('#conteudoinner').querySelector('responsabilidades');;
+
+
+
+        //Scraping the third article title
+        var responseString3 = document.getElementsByClassName('responsabilidades').elementAt(0).getElementsByClassName('dados').first.children[0].text.trim();
+
+        //Converting the extracted titles into string and returning a list of Strings
+        return [
+          responseString1.text.trim(),
+          //responseString2.text.trim(),
+          //responseString3.text.trim()
+        ];
+      } catch (e) {
+        return ['', '', 'ERROR!'];
+      }
+    } else {
+      return ['', '', 'ERROR: ${response.statusCode}.'];
+    }
   }
 }
