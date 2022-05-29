@@ -25,6 +25,9 @@ import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 import 'controller/on_start_up.dart';
 import 'model/schedule_page_model.dart';
+import 'package:get_storage/get_storage.dart';
+import 'view/Pages/calendar_page_view.dart';
+
 
 /// Stores the state of the app
 final Store<AppState> state = Store<AppState>(appReducers,
@@ -38,12 +41,15 @@ SentryEvent beforeSend(SentryEvent event) {
 
 Future<void> main() async {
   OnStartUp.onStart(state);
+  await GetStorage.init('eventos');
+  restoreEvents();
   await SentryFlutter.init(
     (options) {
       options.dsn =
           'https://a2661645df1c4992b24161010c5e0ecb@o553498.ingest.sentry.io/5680848';
     },
-    appRunner: () => {runApp(MyApp())},
+    appRunner: () => {
+      runApp(MyApp())},
   );
 }
 

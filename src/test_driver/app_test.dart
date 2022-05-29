@@ -5,6 +5,7 @@ import 'steps/logged_in.dart';
 import 'steps/open_drawer.dart';
 import 'steps/page_view.dart';
 import 'steps/tap_button_n_times_step.dart';
+import 'steps/tap_floating_button.dart';
 
 Future<void> main() {
   final config = FlutterTestConfiguration()
@@ -14,7 +15,7 @@ Future<void> main() {
       TestRunSummaryReporter(),
       JsonReporter(path: './test_report.json')
     ]
-    ..stepDefinitions = [TapButtonNTimesStep(), LoggedIn(), OpenDrawer(), PageShown()]
+    ..stepDefinitions = [TapButtonNTimesStep(), LoggedIn(), OpenDrawer(), PageShown(), TapFloatingButton()]
     ..customStepParameterDefinitions = []
     ..restartAppBetweenScenarios = true
     ..targetAppPath = 'test_driver/app.dart';
