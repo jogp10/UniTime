@@ -20,8 +20,6 @@ int entrou = 1;
 
 
 void addAndStoreEvent(Appointment event) {
-  //storageList = [];
-  //events.add(event);
   final storageMap = {}; // temporary map that gets added to storage
   final index = events.length + 1; // for unique map keys
   final nameKey = 'subject$index';
@@ -44,11 +42,6 @@ void addAndStoreEvent(Appointment event) {
     box.write('eventos', storageList); // adding list of maps to storage
 
   }
-  //storageList.add(storageMap); // adding temp map to storageList
-  //box.write('eventos', storageList); // adding list of maps to storage
-  print("entrou um evento\n");
-
-  //restoreEvents();
 }
 
 void restoreEvents() {
@@ -58,7 +51,6 @@ void restoreEvents() {
 
 // looping through the storage list to parse out Task objects from maps
   if(storageList != null && storageList.isNotEmpty){
-    print("entrou\n");
     for (int i = 0; i < storageList.length; i++) {
       final map = storageList[i];
       // index for retreival keys accounting for index starting at 0
@@ -69,8 +61,6 @@ void restoreEvents() {
       endKey = 'endTime$index';
 
       // recreating Task objects from storage
-      print(map[nameKey]);
-      print(map[startKey]);
 
       final event = Appointment(subject: map[nameKey], startTime: DateTime.parse(map[startKey]) ,endTime: DateTime.parse(map[endKey]), color: Colors.green);
 
@@ -94,8 +84,6 @@ class CalendarPageViewState extends SecondaryPageViewState {
   void initState(){
     restoreEvents();
     super.initState();
-    //restoreEvents();
-    //init();
   }
 
   @override
@@ -111,7 +99,7 @@ class CalendarPageViewState extends SecondaryPageViewState {
             .toList();
       },
       builder: (context, exams) {
-        return Calendar(exams: exams,events: []);
+        return Calendar(exams: exams,);
       },
     );
   }
@@ -124,18 +112,8 @@ final CalendarController _controller = CalendarController();
 class Calendar extends StatelessWidget {
 
   final List<Exam> exams;
-  List<Appointment> events;
 
-  Calendar({Key key, @required this.exams, @required this.events}) : super(key: key);
-
-  List<Appointment> getEvent(){
-    return events;
-  }
-
-  void setEvent(List<Appointment> events){
-    this.events = events;
-  }
-
+  Calendar({Key key, @required this.exams,}) : super(key: key);
 
 
   @override
@@ -255,12 +233,6 @@ List<Appointment> getAppointments(List<Exam> exams){
 void getNewEvent(String start, String end, String name, String date){
 
   addAndStoreEvent(createNewEvent(start, end, name, date));
-  /*
-  List<String> eventsSerialized = [];
-  for(int i = 0; i < events.length; i++){
-    eventsSerialized.add(Appointment.serialize(events[i]));
-  }
-  UserSecureStorage.setEvents(eventsSerialized);*/
 
 }
 
