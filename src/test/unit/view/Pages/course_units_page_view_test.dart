@@ -20,7 +20,7 @@ void main() {
     });
 
     testWidgets('When given a single course unit', (WidgetTester tester) async {
-      final courseUnit = CourseUnit(name: ucName);
+      final courseUnit = CourseUnit(name: ucName, semesterCode: '1S');
       final courseUnitList = [
         courseUnit,
       ];

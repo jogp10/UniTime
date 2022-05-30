@@ -168,33 +168,5 @@ void main() {
       expect(actions[1].status, RequestStatus.successful);
       expect(actions[2].exams, []);
     });
-    test('When Exam is ocurring', () async {
-      final DateTime before = DateTime.now().subtract(Duration(hours: 1));
-      final DateTime after = DateTime.now().add(Duration(hours: 1));
-      final String formatedDate = DateFormat('yyyy-MM-dd').format(before);
-      final String formatedHourBefore = DateFormat('kk:mm').format(before);
-      final String formatedHourAfter = DateFormat('kk:mm').format(after);
-      final todayExam = Exam(
-          formatedHourBefore + '-' + formatedHourAfter,
-          'SDIS',
-          'B119, B107, B205',
-          formatedDate,
-          'Recurso - Época Recurso (1ºS)',
-          'Quarta');
-      final Completer<Null> completer = Completer();
-      final actionCreator =
-          getUserExams(completer, parserMock, userPersistentInfo);
-      when(parserMock.parseExams(any))
-          .thenAnswer((_) async => [todayExam].toSet());
-
-      actionCreator(mockStore);
-      await completer.future;
-      final List<dynamic> actions =
-          verify(mockStore.dispatch(captureAny)).captured;
-      expect(actions.length, 3);
-      expect(actions[0].status, RequestStatus.busy);
-      expect(actions[1].status, RequestStatus.successful);
-      expect(actions[2].exams, [todayExam]);
-    });
   });
 }
