@@ -44,7 +44,6 @@ dependencies:
   sentry_flutter: ^5.0.0
   email_validator: ^1.0.6
   syncfusion_flutter_calendar: ^20.1.47
-  flutter_secure_storage: 5.0.2
   get_storage:
 
   flutter_gherkin: ^2.0.0
