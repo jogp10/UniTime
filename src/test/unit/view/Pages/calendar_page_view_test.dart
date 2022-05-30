@@ -4,6 +4,7 @@ import 'package:syncfusion_flutter_calendar/calendar.dart';
 import '../../../testable_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:uni/view/Pages/calendar_page_view.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:uni/main.dart';
 
 void main(){
@@ -54,4 +55,35 @@ void main(){
 
     });
 
+    test('adicionar evento', () async{
+      List<Exam> exams;
+      await GetStorage.init('eventos');
+
+      exams = [];
+      final calendar = Calendar(exams: exams);
+      Appointment ev = createNewEvent('11:00 AM', '2:00 PM' , 'Meeting', '2022-05-31');
+      addAndStoreEvent(ev);
+      restoreEvents();
+      expect(getAppointments(exams)[0], ev);
+      box.erase();
+
+    });
+
+    test('adicionar dois eventos', () async{
+      List<Exam> exams;
+      await GetStorage.init('eventos');
+
+      exams = [];
+      final calendar = Calendar(exams: exams);
+      Appointment ev1 = createNewEvent('11:00 AM', '2:00 PM' , 'Meeting', '2022-05-30');
+      Appointment ev2 = createNewEvent('11:00 AM', '2:00 PM' , 'Meeting', '2022-05-31');
+      addAndStoreEvent(ev1);
+      restoreEvents();
+      addAndStoreEvent(ev2);
+      restoreEvents();
+      expect(getAppointments(exams)[0], ev1);
+      expect(getAppointments(exams)[1], ev2);
+      box.erase();
+
+    });
 }
