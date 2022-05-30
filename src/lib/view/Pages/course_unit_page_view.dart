@@ -81,6 +81,10 @@ class CourseUnitPageViewState extends SecondaryPageViewState {
   }
   loadUcInfo(){
     List<String> aux = [];
+    if(uc.teachers!=''){
+      aux.add('Professores');
+      aux.add(uc.teachers);
+    }
     if(uc.learningResult!='') {
       aux.add('Resultados da aprendizagem');
       aux.add(uc.learningResult);
