@@ -217,7 +217,7 @@ class MediasList extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.blue),
                       ),
-                      ucs[index].grade != ''
+                      ucs[index].grade != null
                           ? Text('Grade : ' + ucs[index].grade,
                               style: TextStyle(
                                   fontSize: 15,

@@ -60,13 +60,18 @@ class CourseList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (semester1 && semester2) {
-      ucs3 = ucs + ucs2;
+      if (ucs==null) {
+        ucs3 = ucs2;
+      } else if(ucs2==null) {
+        ucs3 = ucs;
+      } else {
+        ucs3 = ucs + ucs2;
+      }
     } else if (semester1) {
       ucs3 = ucs;
     } else if (semester2) {
       ucs3 = ucs2;
     }
-
     return Scaffold(
         body: Column(
           children: [
