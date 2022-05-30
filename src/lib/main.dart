@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
-import 'package:sentry/sentry.dart';
 import 'package:redux/redux.dart';
 import 'package:uni/controller/middleware.dart';
 import 'package:uni/model/app_state.dart';
@@ -18,7 +17,6 @@ import 'package:uni/view/Pages/calendar_page_view.dart';
 import 'package:uni/view/Pages/exams_page_view.dart';
 import 'package:uni/view/Pages/home_page_view.dart';
 import 'package:uni/view/Pages/logout_route.dart';
-import 'package:uni/view/Pages/media_page_view.dart';
 import 'package:uni/view/Pages/medias_page_view.dart';
 import 'package:uni/view/Pages/splash_page_view.dart';
 import 'package:uni/view/Pages/course_units_page_view.dart';
@@ -26,6 +24,7 @@ import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:uni/view/navigation_service.dart';
 import 'package:uni/view/theme.dart';
 import 'controller/on_start_up.dart';
+import 'package:get_storage/get_storage.dart';
 import 'model/schedule_page_model.dart';
 
 /// Stores the state of the app
@@ -40,6 +39,8 @@ SentryEvent beforeSend(SentryEvent event) {
 
 Future<void> main() async {
   OnStartUp.onStart(state);
+  await GetStorage.init('medias');
+  restoreMedias();
   await SentryFlutter.init(
     (options) {
       options.dsn =
