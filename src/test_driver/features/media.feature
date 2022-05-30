@@ -5,5 +5,5 @@ Feature: Media page
     Given I am logged in
     When I open the drawer
     When I tap the "Média" button 1 times
-    When I tap the "Engenharia de Software" button 1 times
-    Then I expect the text "Fórmula" to be present
+    When I tap the "Desenho de Algoritmos" button 1 times
+    Then I expect the text "Exames" to be present
