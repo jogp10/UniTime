@@ -33,7 +33,7 @@ class CourseUnit {
     this.semesterName,
     this.type,
     this.status,
-    this.grade,
+    this.grade = '',
     this.ectsGrade,
     this.result,
     this.ects});

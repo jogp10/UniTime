@@ -92,7 +92,7 @@ void restoreMedias() {
 }
 
 void updateMedia(Media media) {
-  storageList = box.read('medias');
+  var storageList = box.read('medias');
   box.remove('medias');
 
   for (int i = 0; i < storageList.length; i++) {
@@ -136,7 +136,7 @@ class MediasPageViewState extends SecondaryPageViewState {
               break;
             }
           }
-          if (!has && ucs[i].grade != '') {
+          if (!has && ucs[i].grade == '') {
             getNewMedia(ucs[i].id, 0.5, 0, 0.3, 0, 0.2, 0);
           }
           restoreMedias();
@@ -217,7 +217,7 @@ class MediasList extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             color: Colors.blue),
                       ),
-                      ucs[index].grade != null
+                      ucs[index].grade != ''
                           ? Text('Grade : ' + ucs[index].grade,
                               style: TextStyle(
                                   fontSize: 15,

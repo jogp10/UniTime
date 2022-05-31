@@ -22,7 +22,7 @@ void main() {
 
     testWidgets('When given a single course unit', (WidgetTester tester) async {
       final media = Media(id:9999, grade:17);
-      final courseUnit = CourseUnit(name: ucName, id:9999);
+      final courseUnit = CourseUnit(name: ucName, id:9999, grade:'');
       final courseUnitList = [
         courseUnit,
       ];
