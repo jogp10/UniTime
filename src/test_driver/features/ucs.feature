@@ -5,5 +5,5 @@ Feature: UC info
     Given I am logged in
     When I open the drawer
     When I tap the "Minhas UC's" button 1 times
-    When I tap the "Engenharia de Software" button 1 times
-    Then I expect the text "Engenharia de Software" to be present
+    When I tap the "Bases de Dados" button 1 times
+    Then I expect the text "Bases de Dados" to be present

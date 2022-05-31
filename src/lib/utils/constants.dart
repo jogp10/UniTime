@@ -9,6 +9,7 @@ const navBugReport = 'Bugs e Sugestões';
 const navLogOut = 'Terminar sessão';
 const navCourses = "Minhas UC's";
 const navCalendar = 'Calendário';
+const navMedia = 'Média';
 
 const faculties = ['faup', 'fbaup', 'fcup', 'fcnaup', 'fadeup',
                   'fdup', 'fep', 'feup', 'ffup', 'flup', 'fmup',

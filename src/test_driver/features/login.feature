@@ -11,10 +11,16 @@ Feature: Open pages
     Given I am logged in
     When I open the drawer
     When I tap the "Minhas UC's" button 1 times
-    Then I expect the text "Engenharia de Software" to be present
+    Then I expect the text "Bases de Dados" to be present
 
   Scenario: Access the "Área Pessoal" page
     Given I am logged in
     When I open the drawer
     When I tap the "Área Pessoal" button 1 times
     Then I expect the text "Área Pessoal" to be present
+
+  Scenario: Access the "Área Pessoal" page
+    Given I am logged in
+    When I open the drawer
+    When I tap the "Média" button 1 times
+    Then I expect the text "Bases de Dados" to be present

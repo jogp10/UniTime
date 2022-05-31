@@ -27,6 +27,7 @@ class NavigationDrawerState extends State<NavigationDrawer> {
       Constants.navPersonalArea: _onSelectPage,
       Constants.navCourses: _onSelectPage,
       Constants.navCalendar: _onSelectPage,
+      Constants.navMedia: _onSelectPage,
       Constants.navBugReport: _onSelectPage,
     };
   }

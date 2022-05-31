@@ -44,6 +44,7 @@ dependencies:
   sentry_flutter: ^5.0.0
   email_validator: ^1.0.6
   syncfusion_flutter_calendar: ^20.1.47
+  flutter_secure_storage: ^5.0.2
   get_storage:
 
   flutter_gherkin: ^2.0.0
@@ -63,8 +64,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  test: any
-  mockito:
   flutter_launcher_icons: ^0.9.0
   flutter_native_splash: ^1.0.3
   build_runner: ^2.1.7
