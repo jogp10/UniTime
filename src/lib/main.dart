@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_redux/flutter_redux.dart';
@@ -41,6 +42,15 @@ SentryEvent beforeSend(SentryEvent event) {
 
 Future<void> main() async {
   OnStartUp.onStart(state);
+  AwesomeNotifications().initialize('resource://drawble/res_notification_app_icon',
+    [NotificationChannel(
+      channelKey: 'scheduled_channel',
+      channelName: 'Event Notification',
+      defaultColor: Colors.blue[800],
+      importance: NotificationImportance.High,
+      channelShowBadge: true,
+    ),]
+  );
   await GetStorage.init('eventos');
   restoreEvents();
   await GetStorage.init('medias');

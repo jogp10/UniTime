@@ -45,6 +45,7 @@ dependencies:
   email_validator: ^1.0.6
   syncfusion_flutter_calendar: ^20.1.47
   flutter_secure_storage: ^5.0.2
+  awesome_notifications: ^0.0.6+10
   get_storage:
 
   flutter_gherkin: ^2.0.0
