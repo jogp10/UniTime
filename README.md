@@ -174,7 +174,7 @@ You can find below information and references related with the project managemen
     * Second iteration begin ![Imgur](https://i.imgur.com/BDtmoYV.png)
     * Second iteration end ![Imgur](https://i.imgur.com/ANjrfYX.png)
     * Third Iteration begin ![Imgur](https://i.imgur.com/mjnYuOY.png)
-    * Third Iteration end ![Imgur]()
+    * Third Iteration end ![Imgur](https://i.imgur.com/PndJdwJ.png)
   * Retrospectives:
     *  [Iteration 1](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/docs/retrospective1.md);
     *  [Iteration 2](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/docs/retrospective2.md);
