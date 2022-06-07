@@ -5,11 +5,15 @@ int createUniqueId() {
 }
 
 class NotificationWeekAndTime {
-  final int dayOfTheWeek;
+  final int day;
+  final int month;
+  final int year;
   final TimeOfDay timeOfDay;
 
   NotificationWeekAndTime({
-    @required this.dayOfTheWeek,
+    @required this.day,
+    @required this.month,
+    @required this.year,
     @required this.timeOfDay,
   });
 }

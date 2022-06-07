@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:get_storage/get_storage.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/model/entities/exam.dart';
@@ -83,7 +85,6 @@ class CalendarPageViewState extends SecondaryPageViewState {
   void initState(){
     restoreEvents();
     super.initState();
-    MyNotification();
 
   }
 
@@ -242,9 +243,17 @@ List<Appointment> getAppointments(List<Exam> exams){
 }
 
 void getNewEvent(String start, String end, String name, String date){
-
-  addAndStoreEvent(createNewEvent(start, end, name, date));
-
+  Appointment appointment = createNewEvent(start, end, name, date);
+  addAndStoreEvent(appointment);
+  DateTime dateTime = DateTime.parse(date);
+  DateTime time = appointment.startTime.subtract(Duration(hours: 1));
+  NotificationWeekAndTime notTime = NotificationWeekAndTime(
+      day: dateTime.day,
+      month: dateTime.month,
+      year: dateTime.year,
+      timeOfDay: TimeOfDay.fromDateTime(time),
+  );
+ createDaysLeftNotification(notTime);
 }
 
 Appointment createNewEvent(String start, String end, String name, String date) {
@@ -313,13 +322,16 @@ List<String> weekdays = [
 void createNotifications(List<Appointment> appointments){
   if(appointments != null && appointments.isNotEmpty){
     for(int i = 0; i < appointments.length; i++){
-      String day = DateFormat('EEEE').format(appointments[i].startTime);
-      final index = weekdays.indexWhere((element) => element.contains(day));
+      DateTime date = appointments[i].startTime.subtract(Duration(hours: 1));
+      print(date);
       NotificationWeekAndTime notTime = NotificationWeekAndTime(
-        dayOfTheWeek: index + 1,
-        timeOfDay: TimeOfDay.fromDateTime(appointments[i].startTime)
+          day: date.day,
+          month: date.month,
+          year: date.year,
+          timeOfDay: TimeOfDay.fromDateTime(date)
       );
       createDaysLeftNotification(notTime);
+
     }
   }
 }

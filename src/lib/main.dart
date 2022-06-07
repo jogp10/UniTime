@@ -42,7 +42,7 @@ SentryEvent beforeSend(SentryEvent event) {
 
 Future<void> main() async {
   OnStartUp.onStart(state);
-  AwesomeNotifications().initialize('resource://drawble/res_notification_app_icon',
+  AwesomeNotifications().initialize(null,
     [NotificationChannel(
       channelKey: 'scheduled_channel',
       channelName: 'Event Notification',
@@ -51,6 +51,16 @@ Future<void> main() async {
       channelShowBadge: true,
     ),]
   );
+  checkNotificationPermission() {
+    AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
+      if(!isAllowed) {
+        AwesomeNotifications().requestPermissionToSendNotifications();
+      } else {
+
+      }
+
+    });
+  }
   await GetStorage.init('eventos');
   restoreEvents();
   await GetStorage.init('medias');

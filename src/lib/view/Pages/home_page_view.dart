@@ -1,3 +1,4 @@
+import 'package:awesome_notifications/awesome_notifications.dart';
 import 'package:flutter/material.dart';
 import 'package:uni/view/Pages/general_page_view.dart';
 import 'package:uni/view/Widgets/main_cards_list.dart';
