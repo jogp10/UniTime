@@ -1,17 +1,17 @@
+import 'dart:developer';
+
 import 'package:get_storage/get_storage.dart';
 import 'package:uni/model/app_state.dart';
 import 'package:uni/model/entities/exam.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
-import 'package:uni/view/Pages/new_event_page_view.dart';
+import 'package:uni/utilities.dart';
 import 'package:uni/view/Pages/secondary_page_view.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 import 'package:uni/view/Widgets/page_transition.dart';
 import 'package:intl/intl.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:uni/user_secure_storage.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:uni/notification.dart';
+import 'package:uni/my_notification.dart';
 
 List<Appointment> events = [];
 final box = GetStorage();
@@ -20,8 +20,6 @@ int entrou = 1;
 
 
 void addAndStoreEvent(Appointment event) {
-  //storageList = [];
-  //events.add(event);
   final storageMap = {}; // temporary map that gets added to storage
   final index = events.length + 1; // for unique map keys
   final nameKey = 'subject$index';
@@ -44,11 +42,7 @@ void addAndStoreEvent(Appointment event) {
     box.write('eventos', storageList); // adding list of maps to storage
 
   }
-  //storageList.add(storageMap); // adding temp map to storageList
-  //box.write('eventos', storageList); // adding list of maps to storage
-  print("entrou um evento\n");
 
-  //restoreEvents();
 }
 
 void restoreEvents() {
@@ -58,7 +52,6 @@ void restoreEvents() {
 
 // looping through the storage list to parse out Task objects from maps
   if(storageList != null && storageList.isNotEmpty){
-    print("entrou\n");
     for (int i = 0; i < storageList.length; i++) {
       final map = storageList[i];
       // index for retreival keys accounting for index starting at 0
@@ -69,8 +62,6 @@ void restoreEvents() {
       endKey = 'endTime$index';
 
       // recreating Task objects from storage
-      print(map[nameKey]);
-      print(map[startKey]);
 
       final event = Appointment(subject: map[nameKey], startTime: DateTime.parse(map[startKey]) ,endTime: DateTime.parse(map[endKey]), color: Colors.green);
 
@@ -94,8 +85,7 @@ class CalendarPageViewState extends SecondaryPageViewState {
   void initState(){
     restoreEvents();
     super.initState();
-    //restoreEvents();
-    //init();
+
   }
 
   @override
@@ -253,15 +243,17 @@ List<Appointment> getAppointments(List<Exam> exams){
 }
 
 void getNewEvent(String start, String end, String name, String date){
-
-  addAndStoreEvent(createNewEvent(start, end, name, date));
-  /*
-  List<String> eventsSerialized = [];
-  for(int i = 0; i < events.length; i++){
-    eventsSerialized.add(Appointment.serialize(events[i]));
-  }
-  UserSecureStorage.setEvents(eventsSerialized);*/
-
+  Appointment appointment = createNewEvent(start, end, name, date);
+  addAndStoreEvent(appointment);
+  DateTime dateTime = DateTime.parse(date);
+  DateTime time = appointment.startTime.subtract(Duration(hours: 1));
+  NotificationWeekAndTime notTime = NotificationWeekAndTime(
+      day: dateTime.day,
+      month: dateTime.month,
+      year: dateTime.year,
+      timeOfDay: TimeOfDay.fromDateTime(time),
+  );
+ createDaysLeftNotification(notTime);
 }
 
 Appointment createNewEvent(String start, String end, String name, String date) {
@@ -315,6 +307,33 @@ class MeetingDataSource extends CalendarDataSource {
     appointments = source;
   }
 
+}
+
+List<String> weekdays = [
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
+];
+
+void createNotifications(List<Appointment> appointments){
+  if(appointments != null && appointments.isNotEmpty){
+    for(int i = 0; i < appointments.length; i++){
+      DateTime date = appointments[i].startTime.subtract(Duration(hours: 1));
+      print(date);
+      NotificationWeekAndTime notTime = NotificationWeekAndTime(
+          day: date.day,
+          month: date.month,
+          year: date.year,
+          timeOfDay: TimeOfDay.fromDateTime(date)
+      );
+      createDaysLeftNotification(notTime);
+
+    }
+  }
 }
 
 class NewEventPageView extends StatefulWidget{
