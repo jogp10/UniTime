@@ -12,14 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1356fb-d7e7-484e-b614-a8204bf983eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/notification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/utilities.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utilities.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/view/Pages/calendar_page_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/view/Pages/calendar_page_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/view/Pages/home_page_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/view/Pages/home_page_view.dart" afterDir="false" />
-    </list>
+    <list default="true" id="ca1356fb-d7e7-484e-b614-a8204bf983eb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
