@@ -173,6 +173,8 @@ You can find below information and references related with the project managemen
     * First iteration end ![Imgur](https://i.imgur.com/brje6p9.png)
     * Second iteration begin ![Imgur](https://i.imgur.com/BDtmoYV.png)
     * Second iteration end ![Imgur](https://i.imgur.com/ANjrfYX.png)
+    * Third Iteration begin ![Imgur](https://i.imgur.com/mjnYuOY.png)
+    * Third Iteration end ![Imgur]()
   * Retrospectives:
     *  [Iteration 1](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/docs/retrospective1.md);
     *  [Iteration 2](https://github.com/LEIC-ES-2021-22/2LEIC04T2/blob/main/docs/retrospective2.md);
